@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <div className="border-b border-neutrall-900 pb-4">
+    <div className="border-b border-neutral-900 pb-4">
       <motion.h2
         className="my-20 text-center text-4xl"
         whileInView={{ opacity: 1, y: 0 }}
