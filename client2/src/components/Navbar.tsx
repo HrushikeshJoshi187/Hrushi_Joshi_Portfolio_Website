@@ -1,30 +1,31 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
 interface NavbarProps {
   navOpen: boolean;
 }
 
 export default function Navbar({ navOpen }: NavbarProps) {
-  const [lastActiveLink, setLastActiveLink] =
-    useState<HTMLAnchorElement | null>(null);
-  const activeBox = useRef<HTMLDivElement>(null);
+  const lastActiveLink = useRef<HTMLAnchorElement | null>(null);
+  const activeBox = useRef<HTMLDivElement | null>(null);
 
   const initActiveBox = () => {
-    if (lastActiveLink && activeBox.current) {
-      console.log(lastActiveLink);
-      console.log(activeBox.current);
-      activeBox.current.style.top = lastActiveLink.offsetTop + "px";
-      activeBox.current.style.left = lastActiveLink.offsetLeft + "px";
-      activeBox.current.style.width = lastActiveLink.offsetWidth + "px";
-      activeBox.current.style.height = lastActiveLink.offsetHeight + "px";
+    // console.log(lastActiveLink.current);
+    // console.log(activeBox.current);
+
+    if (lastActiveLink.current && activeBox.current) {
+      activeBox.current.style.top = lastActiveLink.current.offsetTop + "px";
+      activeBox.current.style.left = lastActiveLink.current.offsetLeft + "px";
+      activeBox.current.style.width = lastActiveLink.current.offsetWidth + "px";
+      activeBox.current.style.height =
+        lastActiveLink.current.offsetHeight + "px";
     }
   };
 
   const activeCurrentLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    if (lastActiveLink && activeBox.current) {
-      lastActiveLink.classList.remove("active");
+    if (lastActiveLink.current && activeBox.current) {
+      lastActiveLink.current.classList.remove("active");
       event.currentTarget.classList.add("active");
-      setLastActiveLink(event.currentTarget);
+      lastActiveLink.current = event.currentTarget;
       initActiveBox();
     }
   };
@@ -32,6 +33,8 @@ export default function Navbar({ navOpen }: NavbarProps) {
   useEffect(() => {
     initActiveBox();
   }, []);
+
+  window.addEventListener("resize", initActiveBox);
 
   const navItems = [
     {
@@ -70,9 +73,7 @@ export default function Navbar({ navOpen }: NavbarProps) {
           key={key}
           ref={ref}
           className={className}
-          onClick={() => {
-            activeCurrentLink();
-          }}
+          onClick={activeCurrentLink}
         >
           {label}
         </a>
