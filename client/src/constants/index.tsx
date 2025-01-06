@@ -9,11 +9,41 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "December 2021 – August 2023",
+    role: "Front End Developer",
+    company: "Persistent Systems",
+    description: `Date picker project | Front End Developer Pune, Maharashtra 
+Tech Stack/Concepts: JavaScript, TypeScript, React.js, HTML, CSS, Nebula.js, Playwright
+• Coordinated with the Qlik visualizations team to develop and deploy a native date picker for the Qlik Sense app,
+enhancing custom date selection, formatting, and localization for over 35,000 global users
+• Constructed a web scraper with Playwright to extract and analyze 10,000 records, populating data in Excel and
+curtailing 8 hours of manual work to 3 hours
+Playwright automation project | Lead Developer
+Tech Stack/Concepts: Playwright, Javascript, React Testing Library, and Jest
+• Led a team of 2 interns to implement automated testing solutions across multiple Qlik Sense components,
+enhancing QA coverage substantially
+• Minimized time & effort required for testing, replaced 3-4 hours long manual tests with 30-minute automated tests
+Cypress automation project | UI Test Developer
+Tech Stack/Concepts: Cypress, Javascript, and CircleCI
+• Collaborated with the Domo, Inc. team to develop automated tests for 7 connectors and created a generalized code
+repository that streamlined testing for additional connectors, reducing test development time by 5 hours
+• Implemented a faster feedback loop with CircleCI, reducing testing time from 20 to 8 minutes
+`,
+    technologies: [
+      "JavaScript",
+      "React.js",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Nebula.js",
+      "Playwright",
+      "Javascript",
+      "React Testing Library",
+      "Jest",
+      "Cypress",
+      "Javascript",
+      "CircleCI",
+    ],
   },
   {
     year: "2022 - 2023",
