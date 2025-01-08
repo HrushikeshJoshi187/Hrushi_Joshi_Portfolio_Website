@@ -1,3 +1,7 @@
-export default function Navigation() {
-  return <>Navigation</>;
+interface NavigationProps {
+  navigationOpened: boolean;
+}
+
+export default function Navigation({ navigationOpened }: NavigationProps) {
+  return <>{navigationOpened ? "Navigation" : ""}</>;
 }

@@ -14,7 +14,7 @@ export default function SkillCard({
   return (
     <div className="skill_card">
       <figure className="skill_card_figure">
-        <img src={skill_logo} alt={skill_name} className="skill_card_image" />
+        <img className="skill_card_image" src={skill_logo} alt={skill_name} />
       </figure>
       <div>
         <h3 className="skill_name">{skill_name}</h3>

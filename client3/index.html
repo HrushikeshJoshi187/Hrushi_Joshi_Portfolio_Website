@@ -2,9 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/logos/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hrushi Joshi</title>
+
+    <title>Hrushikesh Joshi</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/logos/hrushikesh_joshi_logo_light.svg"
+    />
+
+    <script>
+      const setFavicon = (theme) => {
+        const favicon = document.getElementById("favicon");
+        if (theme === "dark") {
+          favicon.href = "./src/assets/logos/hrushikesh_joshi_logo_dark.svg";
+        } else {
+          favicon.href = "./src/assets/logos/hrushikesh_joshi_logo_light.svg";
+        }
+      };
+
+      const matchMediaDark = window.matchMedia("(prefers-color-scheme: dark)");
+      setFavicon(matchMediaDark.matches ? "dark" : "light");
+
+      matchMediaDark.addEventListener("change", (e) => {
+        setFavicon(e.matches ? "dark" : "light");
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

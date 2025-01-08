@@ -1,3 +1,9 @@
+import "./Hero.css";
+
 export default function Hero() {
-  return <>Hero</>;
+  return (
+    <section className="section">
+      <div className="container">Hero</div>
+    </section>
+  );
 }
