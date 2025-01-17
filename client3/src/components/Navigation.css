@@ -1,0 +1,106 @@
+.navigation {
+  position: absolute;
+
+  top: 100%;
+  right: 0px;
+
+  visibility: hidden;
+
+  min-width: 10rem;
+
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+
+  background-color: rgba(250, 250, 250, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(243, 244, 246, 0.05);
+
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
+  border-radius: 1rem;
+
+  isolation: isolate;
+  transform: scale(0.9);
+
+  filter: blur(4px);
+
+  opacity: 0;
+
+  transition-property: opacity, transform, filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.navigation.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+  visibility: visible;
+}
+
+.navigation_link {
+  display: grid;
+  align-items: center;
+
+  height: 2.25rem;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+
+  letter-spacing: 0.025em;
+
+  color: rgba(250, 250, 250, 0.5);
+
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.navigation_link:hover {
+  color: rgba(250, 250, 250, 1);
+}
+
+.navigation_link.active {
+  color: rgba(24, 24, 27, 1);
+  transition-duration: 500ms;
+}
+
+.navigation .active_box {
+  position: absolute;
+  z-index: -1;
+
+  background-color: rgba(250, 250, 250, 1);
+  border-radius: 0.5rem;
+
+  width: 0.25rem;
+  height: 100%;
+
+  transition-property: top, left;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  transition-duration: 500ms;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    position: static;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 0px;
+
+    opacity: 1;
+
+    visibility: visible;
+    transform: scale(1);
+
+    filter: blur(0);
+  }
+}

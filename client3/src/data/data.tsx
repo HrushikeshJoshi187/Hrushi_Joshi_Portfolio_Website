@@ -2,87 +2,87 @@ export const skills = [
   {
     skill_logo: "./src/assets/logos/HTML5.svg",
     skill_name: "HTML5",
-    skill_description: "HTML5",
+    skill_description: "Structure",
   },
   {
     skill_logo: "./src/assets/logos/CSS3_old.svg",
     skill_name: "CSS3",
-    skill_description: "CSS3",
+    skill_description: "Styling",
   },
   {
     skill_logo: "./src/assets/logos/JS.svg",
     skill_name: "Javascript",
-    skill_description: "JS",
+    skill_description: "Interaction",
   },
   {
     skill_logo: "./src/assets/logos/typescript.svg",
     skill_name: "TypeScript",
-    skill_description: "TS",
+    skill_description: "Interaction & Reliability",
   },
   {
     skill_logo: "./src/assets/logos/react.svg",
     skill_name: "React.js",
-    skill_description: "React.js",
+    skill_description: "Component-based UI",
   },
   {
     skill_logo: "./src/assets/logos/express.svg",
     skill_name: "Express.js",
-    skill_description: "Express.js",
+    skill_description: "Server-side Framework",
   },
   {
     skill_logo: "./src/assets/logos/node.svg",
     skill_name: "node.js",
-    skill_description: "node.js",
+    skill_description: "Server Side Programming",
   },
   {
     skill_logo: "./src/assets/logos/mongo_DB.svg",
     skill_name: "Mongo DB",
-    skill_description: "Mongo DB",
+    skill_description: "NoSQL database",
   },
   {
     skill_logo: "./src/assets/logos/mysql.svg",
     skill_name: "MySQL",
-    skill_description: "MySQL",
+    skill_description: "Relational database",
   },
   {
     skill_logo: "./src/assets/logos/three.svg",
     skill_name: "Three.js",
-    skill_description: "Three.js",
+    skill_description: "3D web graphics",
   },
   {
     skill_logo: "./src/assets/logos/playwright.svg",
     skill_name: "Playwright",
-    skill_description: "Playwright",
+    skill_description: "Web testing automation",
   },
   {
     skill_logo: "./src/assets/logos/cypress.svg",
     skill_name: "Cypress",
-    skill_description: "Cypress",
+    skill_description: "Web testing automation",
   },
   {
     skill_logo: "./src/assets/logos/webpack.svg",
     skill_name: "Webpack",
-    skill_description: "Webpack",
+    skill_description: "Module bundler",
   },
   {
     skill_logo: "./src/assets/logos/vite.svg",
     skill_name: "Vite",
-    skill_description: "Vite",
+    skill_description: "Module bundler",
   },
   {
     skill_logo: "./src/assets/logos/c.svg",
     skill_name: "C",
-    skill_description: "C",
+    skill_description: "Low-level programming",
   },
   {
     skill_logo: "./src/assets/logos/c++.svg",
     skill_name: "C++",
-    skill_description: "C++",
+    skill_description: "Object-oriented programming",
   },
   {
     skill_logo: "./src/assets/logos/git.svg",
     skill_name: "Git",
-    skill_description: "Git",
+    skill_description: "Version Control",
   },
 ];
 
@@ -248,5 +248,55 @@ export const footer_socials = [
   {
     label: "CodePen",
     href: "",
+  },
+];
+
+export const projects = [
+  {
+    image: "./src/assets/project_images/project-1.jpg",
+    title: "Full stack music app",
+    tags: ["API", "MVC", "Development"],
+    link: "https://musify-5al0.onrender.com/",
+  },
+  {
+    image: "./src/assets/project_images/project-2.jpg",
+    title: "Free stock photo app",
+    tags: ["API", "SPA"],
+    link: "https://pixstock-official.vercel.app/",
+  },
+  {
+    image: "./src/assets/project_images/project-3.jpg",
+    title: "Recipe app",
+    tags: ["Development", "API"],
+    link: "",
+  },
+  {
+    image: "./src/assets/project_images/project-4.jpg",
+    title: "Real state website",
+    tags: ["Web-design", "Development"],
+    link: "https://github.com/codewithsadee-org/wealthome",
+  },
+  {
+    image: "./src/assets/project_images/project-5.jpg",
+    title: "eCommerce website",
+    tags: ["eCommerce", "Development"],
+    link: "https://github.com/codewithsadee/anon-ecommerce-website",
+  },
+  {
+    image: "./src/assets/project_images/project-6.jpg",
+    title: "vCard Personal portfolio",
+    tags: ["Web-design", "Development"],
+    link: "https://github.com/codewithsadee/vcard-personal-portfolio",
+  },
+];
+
+export const about_items = [
+  {
+    label: "Project done",
+    number: 45,
+  },
+  {
+    label: "Years of experience",
+    number: 10,
   },
 ];
