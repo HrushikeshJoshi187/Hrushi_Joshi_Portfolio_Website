@@ -1,5 +1,7 @@
 import "./Hero.css";
 
+import profile_photo from "../assets/profile_photos/profile_photo.png";
+
 const Hero = (): JSX.Element => {
   return (
     <section id="hero_section" className="hero_section">
@@ -72,7 +74,7 @@ const Hero = (): JSX.Element => {
         <div className="hero_portrait">
           <figure className="hero_portrait_figure">
             <img
-              src="./src/assets/profile_photos/profile_photo.png"
+              src={profile_photo}
               width={656}
               height={800}
               alt="picture"
