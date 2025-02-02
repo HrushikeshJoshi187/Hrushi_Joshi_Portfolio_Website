@@ -30,54 +30,71 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
           <br />
           <br />
           <div>
-            🔗 Live Website:{" "}
-            <a>https://kevinrushportfoliowebsite.netlify.app</a>
+            &#128279; Live Website:{" "}
+            <a
+              className="project_page_link"
+              href="https://kevinrushportfoliowebsite.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://kevinrushportfoliowebsite.netlify.app
+            </a>
           </div>
           <div>
-            🔗 GitHub Repository:{" "}
-            <a>
+            &#128279; GitHub Repository:{" "}
+            <a
+              className="project_page_link"
+              href="github.com/HrushikeshJoshi187/Kevin_Rush_Portfolio_Website"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/HrushikeshJoshi187/Kevin_Rush_Portfolio_Website
             </a>
           </div>
           <div>
-            🔗 CompileTab's Tutorial:{" "}
-            <a>https://www.youtube.com/watch?v=_63mEm3AMSY&t=29s</a>
+            &#128279; CompileTab's Tutorial:{" "}
+            <a
+              className="project_page_link"
+              href="https://www.youtube.com/watch?v=_63mEm3AMSY&t=29s"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://www.youtube.com/watch?v=_63mEm3AMSY&t=29s
+            </a>
           </div>
         </p>
 
-        <h2 className="project_page_headline_2 reveal-up">Project Objective</h2>
+        <h2 className="project_page_headline_2 reveal-up">
+          Project Objectives
+        </h2>
 
-        <div>
-          <p className="project_page_description">
-            The primary goal of this project was to create a highly responsive
-            and interactive portfolio website that effectively highlights
-            professional experience, skills, and projects. The focus areas
-            included:
-          </p>
-
-          <ul className="project_page_list">
-            <li>
+        <div className="project_page_card">
+          <div>
+            <p className="project_page_card_description">
+              The primary goal of this project was to create a highly responsive
+              and interactive portfolio website that effectively highlights
+              professional experience, skills, and projects. The focus areas
+              included:
+              <br />
+              <br />
               Optimized Performance: Ensuring seamless user experience across
               all devices.
-            </li>
-            <li>
+              <br />
               Modern UI/UX: Implementing cutting-edge design trends with smooth
               animations.
-            </li>
-            <li>
+              <br />
               Scalability: Writing maintainable and extensible TypeScript code.
-            </li>
-            <li>
+              <br />
               Efficient Styling: Utilizing TailwindCSS for rapid, responsive
               styling.
-            </li>
-          </ul>
-          <p className="project_page_description">
-            This project also served as an opportunity to strengthen my
-            proficiency in React development, experiment with animation
-            libraries like Framer Motion, and deploy a production-ready
-            application.
-          </p>
+              <br />
+              <br />
+              This project also served as an opportunity to strengthen my
+              proficiency in React development, experiment with animation
+              libraries like Framer Motion, and deploy a production-ready
+              application.
+            </p>
+          </div>
         </div>
 
         <h2 className="project_page_headline_2 reveal-up">Tools I used</h2>
@@ -97,14 +114,19 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
 
         <h2 className="project_page_headline_2 reveal-up">Key Features</h2>
         <p className="project_page_description">
-          Key Features ✅ Fully Responsive Design – Adapted for all screen
-          sizes, ensuring a seamless experience on desktops, tablets, and mobile
-          devices. ✅ Framer Motion Animations – Engaging micro-interactions and
-          transitions enhance the visual appeal and usability. ✅ Scalable
-          TypeScript Codebase – Type safety and improved maintainability ensure
-          long-term flexibility. ✅ TailwindCSS for Efficient Styling – A
-          utility-first approach for faster styling and consistent design. ✅
-          Performance Optimization – Best practices implemented for fast loading
+          Fully Responsive Design: Adapted for all screen sizes, ensuring a
+          seamless experience on desktops, tablets, and mobile devices.
+          <br />
+          Framer Motion Animations: Engaging micro-interactions and transitions
+          enhance the visual appeal and usability.
+          <br />
+          Scalable TypeScript Codebase: Type safety and improved maintainability
+          ensure long-term flexibility.
+          <br />
+          TailwindCSS for Efficient Styling: A utility-first approach for faster
+          styling and consistent design.
+          <br />
+          Performance Optimization: Best practices implemented for fast loading
           and minimal re-renders.
         </p>
 
