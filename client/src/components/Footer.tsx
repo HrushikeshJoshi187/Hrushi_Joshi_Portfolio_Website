@@ -1,4 +1,4 @@
-import { footer_socials, site_map } from "../data/data.tsx";
+import { footer_socials, site_map } from "../data/FooterData.tsx";
 
 import logo from "../assets/logos/hrushikesh_joshi_logo_dark.svg";
 

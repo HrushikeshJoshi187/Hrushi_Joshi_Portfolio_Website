@@ -1,6 +1,6 @@
 import SkillCard from "./SkillCard.tsx";
 
-import { skills } from "../data/data.tsx";
+import { skills } from "../data/SkillsData.tsx";
 
 import "./Skills.css";
 

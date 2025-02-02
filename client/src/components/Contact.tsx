@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import DOMPurify from "dompurify";
 
-import { contact_socials } from "../data/data.tsx";
+import { contact_socials } from "../data/ContactData.tsx";
 
 import "./Contact.css";
 

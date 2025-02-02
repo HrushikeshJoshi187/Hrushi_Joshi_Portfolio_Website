@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard.tsx";
 
-import { projects } from "../data/data.tsx";
+import { projects } from "../data/ProjectsData.tsx";
 
 import "./Projects.css";
 

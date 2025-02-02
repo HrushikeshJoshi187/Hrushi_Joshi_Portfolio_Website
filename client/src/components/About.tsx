@@ -1,4 +1,4 @@
-import { about_items } from "../data/data.tsx";
+import { about_items } from "../data/AboutData.tsx";
 
 import logo from "../assets/logos/hrushikesh_joshi_logo_dark.svg";
 

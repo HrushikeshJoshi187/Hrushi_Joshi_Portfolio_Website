@@ -91,8 +91,9 @@
 }
 
 .project_page_link {
+  color: rgba(56, 189, 248, 1);
+
   text-decoration: underline;
-  color: rgba(200, 200, 200, 1);
 
   cursor: pointer;
 }
@@ -107,6 +108,28 @@
 
 .project_page_card_description {
   color: rgba(212, 212, 216, 1);
+}
+
+.project_page_card_list {
+  padding-left: 20px;
+
+  list-style: disc;
+}
+
+.project_page_card_list_item {
+  display: list-item;
+
+  list-style: disc;
+}
+
+.project_page_card_list_item::marker {
+  color: rgba(56, 189, 248, 1);
+  font-size: 1.2em;
+}
+
+.project_page_blue {
+  color: rgba(56, 189, 248, 1);
+  font-weight: 600;
 }
 
 @media (min-width: 640px) {
