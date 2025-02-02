@@ -1,9 +1,10 @@
-import { site_map } from "../data/data.tsx";
-import { footer_socials } from "../data/data.tsx";
+import { footer_socials, site_map } from "../data/data.tsx";
+
+import logo from "../assets/logos/hrushikesh_joshi_logo_dark.svg";
 
 import "./Footer.css";
 
-export default function Footer() {
+const Footer = (): JSX.Element => {
   return (
     <footer className="footer_section">
       <div className="footer_container">
@@ -14,7 +15,7 @@ export default function Footer() {
             </h2>
 
             <a
-              href="#contact"
+              href="/#contact_section"
               target=""
               className="footer_button footer_primary_button"
             >
@@ -69,20 +70,18 @@ export default function Footer() {
 
         <div className="footer_copyright_section">
           <a href="/" className="footer_logo reveal-up">
-            <img
-              className=""
-              src="./src/assets/logos/hrushikesh_joshi_logo_dark.svg"
-              alt="Hrushi Joshi Logo"
-            />
+            <img className="" src={logo} alt="Hrushi Joshi Logo" />
           </a>
 
           <p className="footer_copyright reveal-up">
             &copy; {new Date().getFullYear()}{" "}
-            <span className="footer_name text-zinc-200">Hrushikesh Joshi</span>.
-            All rights reserved
+            <span className="footer_name">Hrushikesh Joshi</span>. All rights
+            reserved
           </p>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

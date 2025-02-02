@@ -1,10 +1,10 @@
-import SkillCard from "./SkillCard";
+import SkillCard from "./SkillCard.tsx";
 
 import { skills } from "../data/data.tsx";
 
 import "./Skills.css";
 
-export default function Skills() {
+const Skills = (): JSX.Element => {
   return (
     <section id="skills_section" className="skills_section">
       <div className="skills_container">
@@ -28,4 +28,6 @@ export default function Skills() {
       </div>
     </section>
   );
-}
+};
+
+export default Skills;

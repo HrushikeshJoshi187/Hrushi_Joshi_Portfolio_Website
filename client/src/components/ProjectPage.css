@@ -1,0 +1,129 @@
+.project_page {
+  padding-top: 8rem;
+}
+
+.project_page_container {
+  width: 100%;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project_page_headline {
+  width: 100%;
+
+  margin-bottom: 1rem;
+
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 600;
+
+  max-width: max-content;
+
+  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project_page_description {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  color: rgb(161, 161, 170, 1);
+}
+
+.project_page_figure {
+  width: 100%;
+
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  box-shadow: inset 0 0 0 2px rgba(250, 250, 250, 0.1);
+  border-radius: 1.5rem;
+
+  overflow: hidden;
+}
+
+.project_page_image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 1rem;
+
+  vertical-align: middle;
+}
+
+.project_page_headline_2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+
+  max-width: max-content;
+
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+
+  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project_page_list {
+  list-style-type: disc;
+  list-style: circle;
+}
+
+.project_page_skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.75rem;
+
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .project_page_container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project_page_container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project_page {
+    padding-top: 10rem;
+  }
+
+  .project_page_container {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .project_page_headline {
+    font-size: 55px;
+    line-height: 1.15;
+  }
+
+  .project_page_headline_2 {
+    font-size: 2.25rem;
+    font-size: 40px;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 1280px) {
+  .project_page_container {
+    max-width: 72rem;
+  }
+}

@@ -1,92 +1,149 @@
-export const skills = [
+import HTML5 from "../assets/logos/HTML5.svg";
+import CSS3 from "../assets/logos/CSS3_old.svg";
+import JS from "../assets/logos/JS.svg";
+import TypeScript from "../assets/logos/typescript.svg";
+import ReactLogo from "../assets/logos/react.svg";
+import Express from "../assets/logos/express.svg";
+import Node from "../assets/logos/node.svg";
+import MongoDB from "../assets/logos/mongo_DB.svg";
+import MySQL from "../assets/logos/mysql.svg";
+import Three from "../assets/logos/three.svg";
+import Playwright from "../assets/logos/playwright.svg";
+import Cypress from "../assets/logos/cypress.svg";
+import Webpack from "../assets/logos/webpack.svg";
+import Vite from "../assets/logos/vite.svg";
+import C from "../assets/logos/c.svg";
+import Cpp from "../assets/logos/c++.svg";
+import Git from "../assets/logos/git.svg";
+import Tailwind from "../assets/logos/tailwind_css.svg";
+
+type Skill = {
+  skill_logo: string;
+  skill_name: string;
+  skill_description: string;
+};
+
+type ContactSocial = {
+  social_logo: JSX.Element;
+  social: string;
+};
+
+type SiteMapItem = {
+  label: string;
+  href: string;
+};
+
+type SocialLink = {
+  label: string;
+  href: string;
+};
+
+type Project = {
+  image: string;
+  title: string;
+  tags: string[];
+  link: string;
+};
+
+type AboutItem = {
+  label: string;
+  number: number;
+};
+
+export const skills: Skill[] = [
   {
-    skill_logo: "./src/assets/logos/HTML5.svg",
+    skill_logo: HTML5,
     skill_name: "HTML5",
     skill_description: "Structure",
   },
   {
-    skill_logo: "./src/assets/logos/CSS3_old.svg",
+    skill_logo: CSS3,
     skill_name: "CSS3",
     skill_description: "Styling",
   },
   {
-    skill_logo: "./src/assets/logos/JS.svg",
+    skill_logo: JS,
     skill_name: "Javascript",
     skill_description: "Interaction",
   },
   {
-    skill_logo: "./src/assets/logos/typescript.svg",
+    skill_logo: TypeScript,
     skill_name: "TypeScript",
     skill_description: "Interaction & Reliability",
   },
   {
-    skill_logo: "./src/assets/logos/react.svg",
+    skill_logo: ReactLogo,
     skill_name: "React.js",
     skill_description: "Component-based UI",
   },
   {
-    skill_logo: "./src/assets/logos/express.svg",
+    skill_logo: Express,
     skill_name: "Express.js",
     skill_description: "Server-side Framework",
   },
   {
-    skill_logo: "./src/assets/logos/node.svg",
+    skill_logo: Node,
     skill_name: "node.js",
     skill_description: "Server Side Programming",
   },
   {
-    skill_logo: "./src/assets/logos/mongo_DB.svg",
+    skill_logo: MongoDB,
     skill_name: "Mongo DB",
     skill_description: "NoSQL database",
   },
   {
-    skill_logo: "./src/assets/logos/mysql.svg",
+    skill_logo: MySQL,
     skill_name: "MySQL",
     skill_description: "Relational database",
   },
   {
-    skill_logo: "./src/assets/logos/three.svg",
+    skill_logo: Tailwind,
+    skill_name: "Tailwind CSS",
+    skill_description: "Utility-first CSS framework",
+  },
+  {
+    skill_logo: Three,
     skill_name: "Three.js",
     skill_description: "3D web graphics",
   },
   {
-    skill_logo: "./src/assets/logos/playwright.svg",
+    skill_logo: Playwright,
     skill_name: "Playwright",
     skill_description: "Web testing automation",
   },
   {
-    skill_logo: "./src/assets/logos/cypress.svg",
+    skill_logo: Cypress,
     skill_name: "Cypress",
     skill_description: "Web testing automation",
   },
   {
-    skill_logo: "./src/assets/logos/webpack.svg",
+    skill_logo: Webpack,
     skill_name: "Webpack",
     skill_description: "Module bundler",
   },
   {
-    skill_logo: "./src/assets/logos/vite.svg",
+    skill_logo: Vite,
     skill_name: "Vite",
     skill_description: "Module bundler",
   },
   {
-    skill_logo: "./src/assets/logos/c.svg",
+    skill_logo: C,
     skill_name: "C",
     skill_description: "Low-level programming",
   },
   {
-    skill_logo: "./src/assets/logos/c++.svg",
+    skill_logo: Cpp,
     skill_name: "C++",
     skill_description: "Object-oriented programming",
   },
   {
-    skill_logo: "./src/assets/logos/git.svg",
+    skill_logo: Git,
     skill_name: "Git",
     skill_description: "Version Control",
   },
 ];
 
-export const contact_socials = [
+export const contact_socials: ContactSocial[] = [
   {
     social_logo: (
       <svg
@@ -205,7 +262,7 @@ export const contact_socials = [
   },
 ];
 
-export const site_map = [
+export const site_map: SiteMapItem[] = [
   {
     label: "Home",
     href: "#home_section",
@@ -228,7 +285,7 @@ export const site_map = [
   },
 ];
 
-export const footer_socials = [
+export const footer_socials: SocialLink[] = [
   {
     label: "GitHub",
     href: "https://github.com/HrushikeshJoshi187",
@@ -251,7 +308,7 @@ export const footer_socials = [
   },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     image: "./src/assets/project_images/project-1.jpg",
     title: "Full stack music app",
@@ -290,7 +347,7 @@ export const projects = [
   },
 ];
 
-export const about_items = [
+export const about_items: AboutItem[] = [
   {
     label: "Project done",
     number: 45,
@@ -298,5 +355,48 @@ export const about_items = [
   {
     label: "Years of experience",
     number: 10,
+  },
+];
+
+export const kevin_rush_portfolio_website_skills = [
+  {
+    skill_logo: HTML5,
+    skill_name: "HTML5",
+    skill_description: "Structure",
+  },
+  {
+    skill_logo: CSS3,
+    skill_name: "CSS3",
+    skill_description: "Styling",
+  },
+  {
+    skill_logo: JS,
+    skill_name: "Javascript",
+    skill_description: "Interaction",
+  },
+  {
+    skill_logo: TypeScript,
+    skill_name: "TypeScript",
+    skill_description: "Interaction & Reliability",
+  },
+  {
+    skill_logo: ReactLogo,
+    skill_name: "React.js",
+    skill_description: "Component-based UI",
+  },
+  {
+    skill_logo: Tailwind,
+    skill_name: "Tailwind CSS",
+    skill_description: "Utility-first CSS framework",
+  },
+  {
+    skill_logo: Vite,
+    skill_name: "Vite",
+    skill_description: "Module bundler",
+  },
+  {
+    skill_logo: Git,
+    skill_name: "Git",
+    skill_description: "Version Control",
   },
 ];

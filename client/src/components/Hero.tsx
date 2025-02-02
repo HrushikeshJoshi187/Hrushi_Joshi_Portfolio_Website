@@ -1,11 +1,11 @@
 import "./Hero.css";
 
-export default function Hero() {
+const Hero = (): JSX.Element => {
   return (
     <section id="hero_section" className="hero_section">
       <div className="hero_container">
         <div>
-          <div className="hero_profile">
+          {/* <div className="hero_profile">
             <figure className="hero_profile_figure">
               <img
                 className="hero_profile_image"
@@ -22,7 +22,7 @@ export default function Hero() {
               </span>
               Available for work
             </div>
-          </div>
+          </div> */}
 
           <h2 className="hero_headline">
             Building Scalable Modern Websites for the Future
@@ -83,4 +83,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

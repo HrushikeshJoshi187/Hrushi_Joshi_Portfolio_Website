@@ -7,12 +7,12 @@ interface ProjectCardProps {
   link: string;
 }
 
-export default function ProjectCard({
+const ProjectCard = ({
   image,
   title,
   tags,
   link,
-}: ProjectCardProps) {
+}: ProjectCardProps): JSX.Element => {
   return (
     <div className="project_card reveal-up">
       <figure className="project_figure">
@@ -65,4 +65,6 @@ export default function ProjectCard({
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;

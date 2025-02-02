@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-import Navigation from "./Navigation";
+import Navigation from "./Navigation.tsx";
+
+import logo from "../assets/logos/hrushikesh_joshi_logo_dark.svg";
 
 import "./Header.css";
 
-export default function Header() {
+const Header = (): JSX.Element => {
   const [navigationOpened, SetNavigationOpened] = useState<boolean>(false);
 
   return (
@@ -13,7 +15,7 @@ export default function Header() {
         <a href="/" className="">
           <img
             className="header_hrushi_joshi_logo_dark"
-            src="./src/assets/logos/hrushikesh_joshi_logo_dark.svg"
+            src={logo}
             alt="logo"
           />
         </a>
@@ -67,4 +69,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

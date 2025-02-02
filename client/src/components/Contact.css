@@ -179,6 +179,60 @@
   border: solid 0px;
 }
 
+.contact_hidden {
+  display: none;
+}
+
+.alert {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 1);
+
+  border-radius: 0.25rem;
+
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.alert.success {
+  background-color: rgba(34, 197, 94, 1);
+}
+
+.alert.failure {
+  background-color: rgba(239, 68, 68, 1);
+}
+
+.alert_button {
+  margin-left: 1rem;
+  color: rgba(255, 255, 255, 1);
+
+  border: 0px;
+  background-color: transparent;
+}
+
+.alert_button:hover {
+  color: rgba(229, 231, 235, 1);
+}
+
 @media (min-width: 640px) {
   .contact_container {
     max-width: 640px;

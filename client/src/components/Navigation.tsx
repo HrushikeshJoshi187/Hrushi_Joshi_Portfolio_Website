@@ -6,7 +6,7 @@ interface NavigationProps {
   navigationOpened: boolean;
 }
 
-export default function Navigation({ navigationOpened }: NavigationProps) {
+const Navigation = ({ navigationOpened }: NavigationProps): JSX.Element => {
   const lastActiveLink = useRef<HTMLAnchorElement | null>(null);
   const activeBox = useRef<HTMLDivElement | null>(null);
 
@@ -80,4 +80,6 @@ export default function Navigation({ navigationOpened }: NavigationProps) {
       <div className="active_box" ref={activeBox}></div>
     </nav>
   );
-}
+};
+
+export default Navigation;

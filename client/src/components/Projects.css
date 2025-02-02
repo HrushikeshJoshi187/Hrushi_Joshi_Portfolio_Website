@@ -27,13 +27,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.projects_section_description {
-  margin-top: 0.75rem;
-  margin-bottom: 2rem;
-  max-width: 50ch;
-  color: rgb(161, 161, 170, 1);
-}
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

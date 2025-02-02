@@ -6,13 +6,13 @@ interface SkillCardProps {
   skill_description: string;
 }
 
-export default function SkillCard({
+const SkillCard = ({
   skill_logo,
   skill_name,
   skill_description,
-}: SkillCardProps) {
+}: SkillCardProps): JSX.Element => {
   return (
-    <div className="skill_card">
+    <div className="skill_card reveal-up">
       <figure className="skill_card_figure">
         <img className="skill_card_image" src={skill_logo} alt={skill_name} />
       </figure>
@@ -22,4 +22,6 @@ export default function SkillCard({
       </div>
     </div>
   );
-}
+};
+
+export default SkillCard;

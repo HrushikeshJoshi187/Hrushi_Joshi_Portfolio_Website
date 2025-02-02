@@ -13,11 +13,11 @@
 }
 
 .footer_headline {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
+  margin-bottom: 2rem;
 
-  max-width: max-content;
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 600;
 
   background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
   -webkit-background-clip: text;
@@ -66,21 +66,6 @@
 
 .footer_information {
   margin-bottom: 2.5rem;
-}
-
-.footer_headline {
-  margin-bottom: 2rem;
-
-  max-width: max-content;
-
-  font-size: 3rem;
-  line-height: 1.25;
-  font-weight: 600;
-
-  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .footer_button .footer_material_symbols_rounded {
