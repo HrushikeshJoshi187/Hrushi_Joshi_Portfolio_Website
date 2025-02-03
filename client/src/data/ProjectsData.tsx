@@ -12,18 +12,21 @@ type Project = {
   link: string;
 };
 
+// const website_url = "https://hrushikeshjoshi.netlify.app";
+const website_url = "http://localhost:5173";
+
 export const projects: Project[] = [
   {
     image: project_1,
-    title: "Full stack music app",
+    title: "Kevin Rush Portfolio Website",
     tags: ["API", "MVC", "Development"],
-    link: "https://musify-5al0.onrender.com/",
+    link: `${website_url}/kevin_rush_portfolio_website`,
   },
   {
     image: project_2,
     title: "Free stock photo app",
     tags: ["API", "SPA"],
-    link: "https://pixstock-official.vercel.app/",
+    link: `${website_url}/John_Doe_portfolio_website`,
   },
   {
     image: project_3,
@@ -50,5 +53,3 @@ export const projects: Project[] = [
     link: "https://github.com/codewithsadee/vcard-personal-portfolio",
   },
 ];
-
-

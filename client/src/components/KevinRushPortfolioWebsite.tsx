@@ -1,26 +1,79 @@
-import "./ProjectPage.css";
+import { useState } from "react";
 
-import SkillCard from "./SkillCard";
+import SkillCard from "./SkillCard.tsx";
 
 import { kevin_rush_portfolio_website_skills } from "../data/KevinRushPortfolioWebsiteData.tsx";
 
-import kevin_rush_portfolio_website from "../assets/kevin_rush_portfolio_website/hero_section_and_navbar.png";
+import kevin_rush_portfolio_website_image_0 from "../assets/kevin_rush_portfolio_website/hero_section_and_navbar.png";
+import kevin_rush_portfolio_website_image_1 from "../assets/kevin_rush_portfolio_website/about_section.png";
+import kevin_rush_portfolio_website_image_2 from "../assets/kevin_rush_portfolio_website/technologies_section.png";
+import kevin_rush_portfolio_website_image_3 from "../assets/kevin_rush_portfolio_website/experience_section.png";
+import kevin_rush_portfolio_website_image_4 from "../assets/kevin_rush_portfolio_website/projects_section.png";
+import kevin_rush_portfolio_website_image_5 from "../assets/kevin_rush_portfolio_website/contact_section.png";
+
+import "./ProjectPage.css";
+
+const project_implementation_images = [
+  {
+    src: kevin_rush_portfolio_website_image_0,
+    caption: "Hero Section and navigation Bar",
+  },
+  { src: kevin_rush_portfolio_website_image_1, caption: "About Section" },
+  {
+    src: kevin_rush_portfolio_website_image_2,
+    caption: "Technologies Section",
+  },
+  { src: kevin_rush_portfolio_website_image_3, caption: "Experience Section" },
+  { src: kevin_rush_portfolio_website_image_4, caption: "Projects Section" },
+  { src: kevin_rush_portfolio_website_image_5, caption: "Contact Section" },
+];
 
 const KevinRushPortfolioWebsite = (): JSX.Element => {
+  const [slideIndex, setSlideIndex] = useState<number>(0);
+
+  const goToSlide = (index: number) => {
+    setSlideIndex(index);
+  };
+
   return (
     <div className="project_page">
       <div className="project_page_container">
         <h1 className="project_page_headline">Kevin Rush Portfolio Website</h1>
+
         <p className="project_page_description">
           A Sleek and Responsive Portfolio Website
         </p>
+
         <figure className="project_page_figure">
-          <img
-            className="project_page_image"
-            src={kevin_rush_portfolio_website}
-            alt="Kevin Rush Portfolio Website"
-          />
+          <div className="project_page_carousel">
+            {project_implementation_images.map((image, index) => (
+              <div
+                key={index}
+                className={`project_page_carousel_slide ${
+                  index === slideIndex ? "active" : ""
+                }`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.caption}
+                  className="project_page_carousel_image"
+                />
+              </div>
+            ))}
+          </div>
         </figure>
+
+        <div className="project_page_carousel_indicators">
+          {project_implementation_images.map((_, index) => (
+            <span
+              key={index}
+              className={`project_page_carousel_indicator ${
+                slideIndex === index ? "active" : ""
+              }`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
 
         <p className="project_page_description">
           This project was a hands-on way to learn TailwindCSS, Framer Motion,

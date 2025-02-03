@@ -66,6 +66,11 @@ export const skills: Skill[] = [
     skill_description: "Server Side Programming",
   },
   {
+    skill_logo: PHP,
+    skill_name: "PHP",
+    skill_description: "Server-side scripting",
+  },
+  {
     skill_logo: MongoDB,
     skill_name: "Mongo DB",
     skill_description: "NoSQL database",
@@ -84,6 +89,16 @@ export const skills: Skill[] = [
     skill_logo: FramerMotion,
     skill_name: "Framer Motion",
     skill_description: "Animation Library",
+  },
+  {
+    skill_logo: SASS_CSS,
+    skill_name: "SASS",
+    skill_description: "CSS preprocessor",
+  },
+  {
+    skill_logo: LESS_CSS,
+    skill_name: "LESS",
+    skill_description: "CSS preprocessor",
   },
   {
     skill_logo: Three,
@@ -119,6 +134,16 @@ export const skills: Skill[] = [
     skill_logo: Cpp,
     skill_name: "C++",
     skill_description: "Object-oriented programming",
+  },
+  {
+    skill_logo: Python,
+    skill_name: "Python",
+    skill_description: "General-purpose programming",
+  },
+  {
+    skill_logo: JQuery,
+    skill_name: "JQuery",
+    skill_description: "Javascript Library",
   },
   {
     skill_logo: Git,

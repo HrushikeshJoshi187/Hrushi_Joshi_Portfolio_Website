@@ -12,6 +12,7 @@ import Projects from "./components/Projects.tsx";
 import Contact from "./components/Contact.tsx";
 import Footer from "./components/Footer.tsx";
 import KevinRushPortfolioWebsite from "./components/KevinRushPortfolioWebsite.tsx";
+import JohnDoePortfolioWebsite from "./components/JohnDoePortfolioWebsite.tsx";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -58,6 +59,10 @@ const App = (): JSX.Element => {
             <Route
               path="/kevin_rush_portfolio_website"
               element={<KevinRushPortfolioWebsite />}
+            />
+            <Route
+              path="/john_doe_portfolio_website"
+              element={<JohnDoePortfolioWebsite />}
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
