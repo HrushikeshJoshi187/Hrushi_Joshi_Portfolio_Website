@@ -48,13 +48,8 @@ const Navigation = ({ navigationOpened }: NavigationProps): JSX.Element => {
       className: "navigation_link",
     },
     {
-      label: "Work",
-      link: "#work_section",
-      className: "navigation_link",
-    },
-    {
-      label: "Reviews",
-      link: "#reviews_section",
+      label: "Projects",
+      link: "#projects_section",
       className: "navigation_link",
     },
     {

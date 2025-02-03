@@ -7,28 +7,10 @@ const Hero = (): JSX.Element => {
     <section id="hero_section" className="hero_section">
       <div className="hero_container">
         <div>
-          {/* <div className="hero_profile">
-            <figure className="hero_profile_figure">
-              <img
-                className="hero_profile_image"
-                src="./src/assets/profile_photos/profile_image.jpg"
-                alt="profile_image"
-                width={40}
-                height={40}
-              />
-            </figure>
-
-            <div className="hero_profile_information">
-              <span className="hero_profile_ping_1">
-                <span className="hero_profile_ping_2"></span>
-              </span>
-              Available for work
-            </div>
-          </div> */}
-
           <h2 className="hero_headline">
             Building Scalable Modern Websites for the Future
           </h2>
+
           <div className="hero_buttons">
             <a
               href=""
@@ -71,17 +53,7 @@ const Hero = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="hero_portrait">
-          <figure className="hero_portrait_figure">
-            <img
-              src={profile_photo}
-              width={656}
-              height={800}
-              alt="picture"
-              className="hero_portrait_image"
-            />
-          </figure>
-        </div>
+        <div className="hero_live_animation"></div>
       </div>
     </section>
   );

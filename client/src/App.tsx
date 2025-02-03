@@ -14,6 +14,8 @@ import Footer from "./components/Footer.tsx";
 import KevinRushPortfolioWebsite from "./components/KevinRushPortfolioWebsite.tsx";
 import JohnDoePortfolioWebsite from "./components/JohnDoePortfolioWebsite.tsx";
 
+import Art from "./components/Art.tsx";
+
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const App = (): JSX.Element => {
@@ -64,6 +66,8 @@ const App = (): JSX.Element => {
               path="/john_doe_portfolio_website"
               element={<JohnDoePortfolioWebsite />}
             />
+
+            <Route path="/art" element={<Art />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <Footer />

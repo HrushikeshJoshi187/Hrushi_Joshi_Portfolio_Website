@@ -11,15 +11,17 @@ const Projects = (): JSX.Element => {
         <h2 className="projects_headline reveal-up">My Portfolio Highlights</h2>
 
         <div className="projects">
-          {projects.map(({ image, title, tags, link }, key) => (
-            <ProjectCard
-              key={key}
-              image={image}
-              title={title}
-              tags={tags}
-              link={link}
-            />
-          ))}
+          {projects.map(
+            ({ image, title, project_page_link, website_link }, key) => (
+              <ProjectCard
+                key={key}
+                image={image}
+                title={title}
+                project_page_link={project_page_link}
+                website_link={website_link}
+              />
+            )
+          )}
         </div>
       </div>
     </section>

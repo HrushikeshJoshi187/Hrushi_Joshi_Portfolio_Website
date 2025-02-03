@@ -65,11 +65,11 @@ export const skills: Skill[] = [
     skill_name: "node.js",
     skill_description: "Server Side Programming",
   },
-  {
-    skill_logo: PHP,
-    skill_name: "PHP",
-    skill_description: "Server-side scripting",
-  },
+  // {
+  //   skill_logo: PHP,
+  //   skill_name: "PHP",
+  //   skill_description: "Server-side scripting",
+  // },
   {
     skill_logo: MongoDB,
     skill_name: "Mongo DB",
@@ -85,21 +85,21 @@ export const skills: Skill[] = [
     skill_name: "Tailwind CSS",
     skill_description: "Utility-first CSS framework",
   },
-  {
-    skill_logo: FramerMotion,
-    skill_name: "Framer Motion",
-    skill_description: "Animation Library",
-  },
-  {
-    skill_logo: SASS_CSS,
-    skill_name: "SASS",
-    skill_description: "CSS preprocessor",
-  },
-  {
-    skill_logo: LESS_CSS,
-    skill_name: "LESS",
-    skill_description: "CSS preprocessor",
-  },
+  // {
+  //   skill_logo: FramerMotion,
+  //   skill_name: "Framer Motion",
+  //   skill_description: "Animation Library",
+  // },
+  // {
+  //   skill_logo: SASS_CSS,
+  //   skill_name: "SASS",
+  //   skill_description: "CSS preprocessor",
+  // },
+  // {
+  //   skill_logo: LESS_CSS,
+  //   skill_name: "LESS",
+  //   skill_description: "CSS preprocessor",
+  // },
   {
     skill_logo: Three,
     skill_name: "Three.js",
@@ -140,11 +140,11 @@ export const skills: Skill[] = [
     skill_name: "Python",
     skill_description: "General-purpose programming",
   },
-  {
-    skill_logo: JQuery,
-    skill_name: "JQuery",
-    skill_description: "Javascript Library",
-  },
+  // {
+  //   skill_logo: JQuery,
+  //   skill_name: "JQuery",
+  //   skill_description: "Javascript Library",
+  // },
   {
     skill_logo: Git,
     skill_name: "Git",

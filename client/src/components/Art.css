@@ -1,0 +1,41 @@
+.art {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(30, 41, 59, 1),
+    /* Dark Blue-Gray */ rgba(15, 23, 42, 1) /* Almost Black */
+  );
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.art_image_0 {
+  display: block;
+
+  position: absolute;
+  top: 20%;
+  left: 10%;
+
+  height: 600px;
+
+  z-index: 100;
+}
+
+.art_image_1 {
+  display: block;
+
+  position: absolute;
+  top: 20%;
+  left: 10%;
+
+  height: 600px;
+
+  z-index: 100;
+}

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 
 import SkillCard from "./SkillCard.tsx";
 
@@ -10,6 +11,14 @@ import kevin_rush_portfolio_website_image_2 from "../assets/kevin_rush_portfolio
 import kevin_rush_portfolio_website_image_3 from "../assets/kevin_rush_portfolio_website/experience_section.png";
 import kevin_rush_portfolio_website_image_4 from "../assets/kevin_rush_portfolio_website/projects_section.png";
 import kevin_rush_portfolio_website_image_5 from "../assets/kevin_rush_portfolio_website/contact_section.png";
+
+import kevin_rush_portfolio_website_image_6 from "../assets/kevin_rush_portfolio_website/mobile_navbar.jpg";
+import kevin_rush_portfolio_website_image_7 from "../assets/kevin_rush_portfolio_website/mobile_hero_section.jpg";
+import kevin_rush_portfolio_website_image_8 from "../assets/kevin_rush_portfolio_website/mobile_about_section.jpg";
+import kevin_rush_portfolio_website_image_9 from "../assets/kevin_rush_portfolio_website/mobile_technologies_section.jpg";
+import kevin_rush_portfolio_website_image_10 from "../assets/kevin_rush_portfolio_website/mobile_experience_section.jpg";
+import kevin_rush_portfolio_website_image_11 from "../assets/kevin_rush_portfolio_website/mobile_projects_section.jpg";
+import kevin_rush_portfolio_website_image_12 from "../assets/kevin_rush_portfolio_website/mobile_contact_section.jpg";
 
 import "./ProjectPage.css";
 
@@ -28,12 +37,62 @@ const project_implementation_images = [
   { src: kevin_rush_portfolio_website_image_5, caption: "Contact Section" },
 ];
 
+const mobile_images = [
+  { src: kevin_rush_portfolio_website_image_6, caption: "Mobile Navbar" },
+  { src: kevin_rush_portfolio_website_image_7, caption: "Mobile Hero Section" },
+  {
+    src: kevin_rush_portfolio_website_image_8,
+    caption: "Mobile About Section",
+  },
+  {
+    src: kevin_rush_portfolio_website_image_9,
+    caption: "Mobile Technologies Section",
+  },
+  {
+    src: kevin_rush_portfolio_website_image_10,
+    caption: "Mobile Experience Section",
+  },
+  {
+    src: kevin_rush_portfolio_website_image_11,
+    caption: "Mobile Projects Section",
+  },
+  {
+    src: kevin_rush_portfolio_website_image_12,
+    caption: "Mobile Contact Section",
+  },
+];
+
 const KevinRushPortfolioWebsite = (): JSX.Element => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const goToSlide = (index: number) => {
     setSlideIndex(index);
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => goToSlide(slideIndex + 1),
+    onSwipedRight: () => goToSlide(slideIndex - 1),
+    trackMouse: true,
+    touchEventOptions: { passive: false },
+  });
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  const imagesToDisplay = isMobile
+    ? mobile_images
+    : project_implementation_images;
 
   return (
     <div className="project_page">
@@ -44,9 +103,9 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
           A Sleek and Responsive Portfolio Website
         </p>
 
-        <figure className="project_page_figure">
+        <figure className="project_page_figure" {...handlers}>
           <div className="project_page_carousel">
-            {project_implementation_images.map((image, index) => (
+            {imagesToDisplay.map((image, index) => (
               <div
                 key={index}
                 className={`project_page_carousel_slide ${
@@ -64,7 +123,7 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
         </figure>
 
         <div className="project_page_carousel_indicators">
-          {project_implementation_images.map((_, index) => (
+          {imagesToDisplay.map((_, index) => (
             <span
               key={index}
               className={`project_page_carousel_indicator ${
@@ -97,7 +156,7 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
           &#128279; GitHub Repository:{" "}
           <a
             className="project_page_link"
-            href="github.com/HrushikeshJoshi187/Kevin_Rush_Portfolio_Website"
+            href="https://github.com/HrushikeshJoshi187/Kevin_Rush_Portfolio_Website"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -108,11 +167,11 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
           &#128279; CompileTab's Tutorial:{" "}
           <a
             className="project_page_link"
-            href="https://www.youtube.com/watch?v=_63mEm3AMSY&t=29s"
+            href="https://www.youtube.com/watch?v=_63mEm3AMSY"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://www.youtube.com/watch?v=_63mEm3AMSY&t=29s
+            https://www.youtube.com/watch?v=_63mEm3AMSY
           </a>
         </div>
 

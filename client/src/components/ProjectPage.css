@@ -256,7 +256,12 @@
 
 @media (max-width: 768px) {
   .project_page_carousel {
-    height: 20rem;
+    min-height: 47rem;
+  }
+
+  .project_page_carousel_image {
+    max-height: 45rem;
+    object-fit: fill;
   }
 
   .project_page_carousel_indicators {
@@ -273,10 +278,6 @@
 }
 
 @media (max-width: 480px) {
-  .project_page_carousel {
-    height: 14rem;
-  }
-
   .project_page_carousel_indicator {
     height: 0.6rem;
     width: 0.6rem;
