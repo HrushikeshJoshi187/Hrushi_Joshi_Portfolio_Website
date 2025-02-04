@@ -6,6 +6,9 @@ import ReactLogo from "../assets/logos/react.svg";
 import Vite from "../assets/logos/vite.svg";
 import Git from "../assets/logos/git.svg";
 import Tailwind_CSS from "../assets/logos/tailwind_CSS.svg";
+import GSAP from "../assets/logos/GSAP.svg";
+import lenis from "../assets/logos/lenis.svg";
+import emailJS from "../assets/logos/emailJS.svg";
 
 export const john_doe_portfolio_website_skills = [
   {
@@ -39,14 +42,24 @@ export const john_doe_portfolio_website_skills = [
     skill_description: "Utility-first CSS framework",
   },
   {
-    skill_logo: FramerMotion,
-    skill_name: "Framer Motion",
+    skill_logo: GSAP,
+    skill_name: "GSAP",
     skill_description: "Animation Library",
+  },
+  {
+    skill_logo: lenis,
+    skill_name: "Lenis",
+    skill_description: "CSS Framework",
   },
   {
     skill_logo: Vite,
     skill_name: "Vite",
     skill_description: "Module bundler",
+  },
+  {
+    skill_logo: emailJS,
+    skill_name: "EmailJS",
+    skill_description: "Email Service",
   },
   {
     skill_logo: Git,
