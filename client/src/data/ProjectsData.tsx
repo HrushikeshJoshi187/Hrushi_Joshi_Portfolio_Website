@@ -9,8 +9,8 @@ type Project = {
   website_link: string;
 };
 
-// const website_url = "https://hrushikeshjoshi.netlify.app";
-const website_url = "http://localhost:5173";
+const website_url = "https://hrushikeshjoshi.netlify.app";
+// const website_url = "http://localhost:5173";
 
 export const projects: Project[] = [
   {

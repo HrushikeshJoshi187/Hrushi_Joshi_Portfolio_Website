@@ -1,7 +1,5 @@
 import "./Hero.css";
 
-import profile_photo from "../assets/profile_photos/profile_photo.png";
-
 const Hero = (): JSX.Element => {
   return (
     <section id="hero_section" className="hero_section">

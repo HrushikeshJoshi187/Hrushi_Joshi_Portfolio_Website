@@ -16,11 +16,11 @@ import C from "../assets/logos/c.svg";
 import Cpp from "../assets/logos/c++.svg";
 import Git from "../assets/logos/git.svg";
 import Tailwind_CSS from "../assets/logos/tailwind_CSS.svg";
-import FramerMotion from "../assets/logos/framer_motion.png";
-import SASS_CSS from "../assets/logos/SASS_CSS.svg";
-import LESS_CSS from "../assets/logos/LESS_CSS.svg";
-import JQuery from "../assets/logos/jquery.svg";
-import PHP from "../assets/logos/PHP.svg";
+// import FramerMotion from "../assets/logos/framer_motion.png";
+// import SASS_CSS from "../assets/logos/SASS_CSS.svg";
+// import LESS_CSS from "../assets/logos/LESS_CSS.svg";
+// import JQuery from "../assets/logos/jquery.svg";
+// import PHP from "../assets/logos/PHP.svg";
 import Python from "../assets/logos/python.svg";
 
 type Skill = {

@@ -6,7 +6,6 @@ import ReactLogo from "../assets/logos/react.svg";
 import Vite from "../assets/logos/vite.svg";
 import Git from "../assets/logos/git.svg";
 import Tailwind_CSS from "../assets/logos/tailwind_CSS.svg";
-import FramerMotion from "../assets/logos/framer_motion.png";
 
 export const john_doe_portfolio_website_skills = [
   {
