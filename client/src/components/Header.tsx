@@ -61,7 +61,7 @@ const Header = (): JSX.Element => {
         </div>
 
         <a
-          href="#contact_section"
+          href="/#contact_section"
           className="header_contact_button header_button header_secondary_button "
         >
           Contact Me

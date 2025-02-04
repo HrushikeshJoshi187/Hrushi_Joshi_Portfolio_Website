@@ -70,13 +70,6 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
     setSlideIndex(index);
   };
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => goToSlide(slideIndex + 1),
-    onSwipedRight: () => goToSlide(slideIndex - 1),
-    trackMouse: true,
-    touchEventOptions: { passive: false },
-  });
-
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -93,6 +86,19 @@ const KevinRushPortfolioWebsite = (): JSX.Element => {
   const imagesToDisplay = isMobile
     ? mobile_images
     : project_implementation_images;
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (slideIndex + 1 >= imagesToDisplay.length) goToSlide(0);
+      else goToSlide(slideIndex + 1);
+    },
+    onSwipedRight: () => {
+      if (slideIndex - 1 <= -1) goToSlide(imagesToDisplay.length - 1);
+      else goToSlide(slideIndex - 1);
+    },
+    trackMouse: true,
+    touchEventOptions: { passive: false },
+  });
 
   return (
     <div className="project_page">

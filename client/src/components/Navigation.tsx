@@ -38,23 +38,23 @@ const Navigation = ({ navigationOpened }: NavigationProps): JSX.Element => {
   const navItems = [
     {
       label: "Home",
-      link: "#hero_section",
+      link: "/#hero_section",
       className: "navigation_link active",
       ref: lastActiveLink,
     },
     {
       label: "About",
-      link: "#about_section",
+      link: "/#about_section",
       className: "navigation_link",
     },
     {
       label: "Projects",
-      link: "#projects_section",
+      link: "/#projects_section",
       className: "navigation_link",
     },
     {
       label: "Contact",
-      link: "#contact_section",
+      link: "/#contact_section",
       className: "navigation_link md:hidden",
     },
   ];

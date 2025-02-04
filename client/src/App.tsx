@@ -1,8 +1,9 @@
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ReactLenis } from "lenis/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Header from "./components/Header.tsx";
 import Hero from "./components/Hero.tsx";
@@ -13,6 +14,7 @@ import Contact from "./components/Contact.tsx";
 import Footer from "./components/Footer.tsx";
 import KevinRushPortfolioWebsite from "./components/KevinRushPortfolioWebsite.tsx";
 import JohnDoePortfolioWebsite from "./components/JohnDoePortfolioWebsite.tsx";
+import AskYourCrushOutOnline from "./components/AskYourCrushOutOnline.tsx";
 
 import Art from "./components/Art.tsx";
 
@@ -65,6 +67,11 @@ const App = (): JSX.Element => {
             <Route
               path="/john_doe_portfolio_website"
               element={<JohnDoePortfolioWebsite />}
+            />
+
+            <Route
+              path="/ask_your_crush_out_online"
+              element={<AskYourCrushOutOnline />}
             />
 
             <Route path="/art" element={<Art />} />
