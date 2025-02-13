@@ -66,8 +66,7 @@ const Hero = (): JSX.Element => {
             </a>
           </div>
         </div>
-
-        <div className="hero_live_animation"></div>
+        {/* <div className="hero_live_animation"></div> */}
       </div>
     </section>
   );

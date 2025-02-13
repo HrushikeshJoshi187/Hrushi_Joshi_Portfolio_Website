@@ -136,7 +136,7 @@ const Contact = (): JSX.Element => {
                 name="client_name"
                 autoComplete="name"
                 required
-                placeholder="e.g., John Doe"
+                placeholder="John Doe"
                 value={formData.client_name}
                 onChange={handleChange}
               />
@@ -154,7 +154,7 @@ const Contact = (): JSX.Element => {
                 name="client_email"
                 autoComplete="email"
                 required
-                placeholder="e.g., JohnDoe@gmail.com"
+                placeholder="JohnDoe@gmail.com"
                 value={formData.client_email}
                 onChange={handleChange}
               />
@@ -170,7 +170,7 @@ const Contact = (): JSX.Element => {
               id="message"
               className="contact_input contact_textarea reveal-up"
               name="client_message"
-              placeholder="e.g., Hi! I would like to collaborate with you on a project."
+              placeholder="Hi! I would like to collaborate with you on a project."
               required
               value={formData.client_message}
               onChange={handleChange}
