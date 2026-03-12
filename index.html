@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link id="favicon" rel="icon" type="image/svg+xml" href="./logos/Hj_light.svg" />
     <title>Hrushikesh Joshi</title>
-    <link id="favicon" rel="icon" type="image/svg+xml" href="./hrushikesh_joshi_logo_light.svg" />
 
     <script>
-      const setFavicon = (theme) => {
-        const favicon = document.getElementById("favicon");
-        if (theme === "dark") {
-          favicon.href = "./hrushikesh_joshi_logo_dark.svg";
+      const favicon = document.getElementById("favicon");
+
+      function updateFavicon() {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          // Dark mode
+          favicon.href = "./logos/Hj_dark.svg";
         } else {
-          favicon.href = "./hrushikesh_joshi_logo_light.svg";
+          // Light mode
+          favicon.href = "./logos/Hj_light.svg";
         }
-      };
+      }
 
-      const matchMediaDark = window.matchMedia("(prefers-color-scheme: dark)");
-      setFavicon(matchMediaDark.matches ? "dark" : "light");
+      // Initial set
+      updateFavicon();
 
-      matchMediaDark.addEventListener("change", (e) => {
-        setFavicon(e.matches ? "dark" : "light");
-      });
+      // Listen for changes (if user switches mode while on the site)
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateFavicon);
     </script>
   </head>
   <body>
