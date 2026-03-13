@@ -12,10 +12,10 @@ import KevinRushPortfolio from "./projects/KevinRushPortfolio";
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full flex bg-slate-900 text-zinc-300">
+    <div className="min-h-screen w-full flex bg-slate-900 text-zinc-400">
       <Header />
       <Socials />
-      <div className="flex-1 flex flex-col">
+      <div className="w-full h-full flex-1 flex flex-col">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/kevin-rush-portfolio" element={<KevinRushPortfolio />} />

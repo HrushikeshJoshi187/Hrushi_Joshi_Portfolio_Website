@@ -1,17 +1,19 @@
 import Hero from "./Hero";
 import About from "./About";
-import Contact from "./Contact";
-import Experience from "./Experience";
 import Projects from "./Projects";
+import Experience from "./Experience";
+import Education from "./Education";
+import Contact from "./Contact";
 
 export default function Home() {
   return (
     <main className="w-full h-full">
       <Hero />
-      {/* <About />
-      <Experience />
+      <About />
       <Projects />
-      <Contact /> */}
+      <Experience />
+      <Education />
+      <Contact />
     </main>
   );
 }

@@ -4,12 +4,12 @@ export default function Email() {
       <div className="sticky right-0 top-[100px] h-[calc(100vh-100px)] w-full flex flex-col items-center justify-end gap-6">
         <a
           href="mailto:hrushikesh.joshi.187@gmail.com"
-          className="hover:text-sky-300 [writing-mode:vertical-rl] tracking-widest text-sm transition-colors duration-300 ease-in-out"
+          className="hover:text-zinc-50 [writing-mode:vertical-rl] tracking-widest text-[clamp(0.875rem,2.8vw+0.4rem,1rem)] transition-colors duration-300 ease-in-out"
         >
           hrushikesh.joshi.187@gmail.com
         </a>
 
-        <div className="w-px h-50 bg-zinc-400"></div>
+        <div className="w-px h-30 bg-zinc-600"></div>
       </div>
     </div>
   );
