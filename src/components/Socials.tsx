@@ -1,15 +1,20 @@
 export default function Socials() {
   return (
-    <div className="hidden md:flex [@media(max-height:400px)]:hidden px-4 lg:pl-12 lg:pr-6 lg:pr-6 relative">
-      <div className="sticky left-0 top-[100px] h-[calc(100vh-100px)] w-full flex flex-col items-center justify-end gap-6">
+    <div className="hidden md:flex [@media(max-height:640px)]:hidden mx-4 lg:ml-12 lg:mr-6 lg:mr-6 relative">
+      <div className="sticky left-0 top-0 h-screen w-full flex flex-col items-center justify-center gap-5 text-[var(--socials-link)] relative">
+        <div className="w-px h-15 bg-[var(--line)]"></div>
         {/* GitHub */}
         <a
           href="https://github.com/HrushikeshJoshi187"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-zinc-50 transition-colors duration-300 ease-in-out"
+          className="relative transition-all duration-300 ease-in-out hover:text-button-hover hover:text-[var(--primary)]"
         >
-          <svg className="w-5 h-5 fill-current" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            className="w-6 h-6 fill-current hover:scale-125 transition-transform duration-300"
+            viewBox="0 0 98 96"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g clip-path="url(#clip0_730_27126)">
               <path d="M41.4395 69.3848C28.8066 67.8535 19.9062 58.7617 19.9062 46.9902C19.9062 42.2051 21.6289 37.0371 24.5 33.5918C23.2559 30.4336 23.4473 23.7344 24.8828 20.959C28.7109 20.4805 33.8789 22.4902 36.9414 25.2656C40.5781 24.1172 44.4062 23.543 49.0957 23.543C53.7852 23.543 57.6133 24.1172 61.0586 25.1699C64.0254 22.4902 69.2891 20.4805 73.1172 20.959C74.457 23.543 74.6484 30.2422 73.4043 33.4961C76.4668 37.1328 78.0937 42.0137 78.0937 46.9902C78.0937 58.7617 69.1934 67.6621 56.3691 69.2891C59.623 71.3945 61.8242 75.9883 61.8242 81.252L61.8242 91.2051C61.8242 94.0762 64.2168 95.7031 67.0879 94.5547C84.4102 87.9512 98 70.6289 98 49.1914C98 22.1074 75.9883 6.69539e-07 48.9043 4.309e-07C21.8203 1.92261e-07 -1.9479e-07 22.1074 -4.3343e-07 49.1914C-6.20631e-07 70.4375 13.4941 88.0469 31.6777 94.6504C34.2617 95.6074 36.75 93.8848 36.75 91.3008L36.75 83.6445C35.4102 84.2188 33.6875 84.6016 32.1562 84.6016C25.8398 84.6016 22.1074 81.1563 19.4277 74.7441C18.375 72.1602 17.2266 70.6289 15.0254 70.3418C13.877 70.2461 13.4941 69.7676 13.4941 69.1934C13.4941 68.0449 15.4082 67.1836 17.3223 67.1836C20.0977 67.1836 22.4902 68.9063 24.9785 72.4473C26.8926 75.2227 28.9023 76.4668 31.2949 76.4668C33.6875 76.4668 35.2187 75.6055 37.4199 73.4043C39.0469 71.7773 40.291 70.3418 41.4395 69.3848Z" />
             </g>
@@ -26,9 +31,13 @@ export default function Socials() {
           href="https://www.linkedin.com/in/hrushikeshjoshi187"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-zinc-50 transition-colors duration-300 ease-in-out"
+          className="relative transition-all duration-300 ease-in-out hover:color-button-hover hover:text-[var(--primary)]"
         >
-          <svg className="w-5.5 h-5.5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            className="w-6.5 h-6.5 fill-current hover:scale-125 transition-transform duration-300"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -42,9 +51,13 @@ export default function Socials() {
           href="https://codepen.io/hrushiJoshi187"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-zinc-50 transition-colors duration-300 ease-in-out"
+          className="relative transition-all duration-300 ease-in-out hover:color-button-hover hover:text-[var(--primary)]"
         >
-          <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            className="w-6 h-6 fill-current hover:scale-125 transition-transform duration-300"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -62,9 +75,13 @@ export default function Socials() {
           href="https://x.com/Hrushikesh86361"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-zinc-50 transition-colors duration-300 ease-in-out"
+          className="relative transition-all duration-300 ease-in-out hover:color-button-hover hover:text-[var(--primary)]"
         >
-          <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 1200 1227" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            className="w-5.5 h-5.5 fill-current hover:scale-125 transition-transform duration-300"
+            viewBox="0 0 1200 1227"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
           </svg>
         </a>
@@ -74,9 +91,15 @@ export default function Socials() {
           href="https://www.instagram.com/hrushikesh_joshi_187/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-zinc-50 transition-colors duration-300 ease-in-out"
+          className="relative transition-all duration-300 ease-in-out hover:color-button-hover hover:text-[var(--primary)]"
         >
-          <svg className="w-5 h-5 fill-current" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+          <svg
+            className="w-6 h-6 fill-current hover:scale-125 transition-transform duration-300"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 1000"
+          >
             <path
               d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.12-75.22-10.22-92.86-17-23.36-9-40-19.88-57.58-37.29s-28.38-34.11-37.5-57.42c-6.85-17.64-15.1-44.08-17.38-92.83-2.48-52.69-3-68.51-3.29-202s.22-149.29,2.53-202c2.08-48.71,10.23-75.21,17-92.84,9-23.39,19.84-40,37.29-57.57s34.1-28.39,57.43-37.51c17.62-6.88,44.06-15.06,92.79-17.38,52.73-2.5,68.53-3,202-3.29s149.31.21,202.06,2.53c48.71,2.12,75.22,10.19,92.83,17,23.37,9,40,19.81,57.57,37.29s28.4,34.07,37.52,57.45c6.89,17.57,15.07,44,17.37,92.76,2.51,52.73,3.08,68.54,3.32,202s-.23,149.31-2.54,202c-2.13,48.75-10.21,75.23-17,92.89-9,23.35-19.85,40-37.31,57.56s-34.09,28.38-57.43,37.5c-17.6,6.87-44.07,15.07-92.76,17.39-52.73,2.48-68.53,3-202.05,3.29s-149.27-.25-202-2.53m407.6-674.61a60,60,0,1,0,59.88-60.1,60,60,0,0,0-59.88,60.1M245.77,503c.28,141.8,115.44,256.49,257.21,256.22S759.52,643.8,759.25,502,643.79,245.48,502,245.76,245.5,361.22,245.77,503m90.06-.18a166.67,166.67,0,1,1,167,166.34,166.65,166.65,0,0,1-167-166.34"
               transform="translate(-2.5 -2.5)"
@@ -84,7 +107,7 @@ export default function Socials() {
           </svg>
         </a>
 
-        <div className="w-px h-60 bg-zinc-600"></div>
+        <div className="w-px h-15 bg-[var(--line)]"></div>
       </div>
     </div>
   );

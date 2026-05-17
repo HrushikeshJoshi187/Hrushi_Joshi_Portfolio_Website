@@ -12,15 +12,15 @@ import KevinRushPortfolio from "./projects/KevinRushPortfolio";
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full flex bg-slate-900 text-zinc-400">
+    <div className="relative min-h-screen w-full flex text-[var(--text-muted)] bg-[var(--background)] text-[clamp(0.875rem,calc(2.8vw+0.5rem),1.25rem)] transition-all duration-300 ease-in-out">
       <Header />
       <Socials />
       <div className="w-full h-full flex-1 flex flex-col">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/kevin-rush-portfolio" element={<KevinRushPortfolio />} />
+          {/* <Route path="/kevin-rush-portfolio" element={<KevinRushPortfolio />} />
           <Route path="/john-doe-portfolio" element={<JohnDoePortfolio />} />
-          <Route path="/ask-your-crush-out-online" element={<AskYourCrushOutOnline />} />
+          <Route path="/ask-your-crush-out-online" element={<AskYourCrushOutOnline />} /> */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />

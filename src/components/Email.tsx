@@ -1,15 +1,15 @@
 export default function Email() {
   return (
-    <div className="hidden md:flex [@media(max-height:400px)]:hidden px-4 lg:pl-6 lg:pr-12 relative">
-      <div className="sticky right-0 top-[100px] h-[calc(100vh-100px)] w-full flex flex-col items-center justify-end gap-6">
+    <div className="hidden md:flex [@media(max-height:640px)]:hidden mx-4 lg:ml-6 lg:mr-12 relative">
+      <div className="sticky right-0 top-0 h-screen w-full flex flex-col items-center justify-center gap-5 text-[var(--socials-link)]">
+        <div aria-hidden="true" className="w-px h-15 bg-[var(--line)]"></div>
         <a
           href="mailto:hrushikesh.joshi.187@gmail.com"
-          className="hover:text-zinc-50 [writing-mode:vertical-rl] tracking-widest text-[clamp(0.875rem,2.8vw+0.4rem,1rem)] transition-colors duration-300 ease-in-out"
+          className="pl-1 [writing-mode:vertical-rl] tracking-widest text-[clamp(0.875rem,2.8vw+0.4rem,1rem)] transition-all duration-300 ease-in-out hover:text-[var(--primary)] hover:scale-105 transition-transform duration-300"
         >
           hrushikesh.joshi.187@gmail.com
         </a>
-
-        <div className="w-px h-30 bg-zinc-600"></div>
+        <div aria-hidden="true" className="w-px h-15 bg-[var(--line)]"></div>
       </div>
     </div>
   );

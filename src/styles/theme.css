@@ -1,0 +1,66 @@
+@theme {
+  --primary: oklch(50% 0.134 242.749); /* Sky 700 */
+
+  --background: oklch(96.7% 0.001 286.375); /* Zinc 100 */
+
+  --surface: oklch(98.5% 0 0); /* Zinc 50 */
+
+  --text: oklch(14.1% 0.005 285.823); /* Zinc 950 */
+  --text-muted: oklch(37% 0.013 285.805); /* Zinc 700 */
+
+  --line: oklch(87.1% 0.006 286.286); /* Zinc 400 */
+
+  --socials-link: oklch(14.1% 0.005 285.823); /* Zinc 950 */
+
+  --scrollbar-track: oklch(96.7% 0.001 286.375);
+  --scrollbar-thumb: oklch(21% 0.006 285.885);
+  --scrollbar-thumb-hover: oklch(14.1% 0.005 285.823);
+
+  --toggle-background: oklch(87.1% 0.006 286.286); /* Zinc 300 */
+}
+
+/* Dark theme */
+.dark {
+  --primary: oklch(82.8% 0.111 230.318); /* Sky 300 */
+
+  --background: oklch(20.8% 0.042 265.755); /* Slate 900 */
+
+  --surface: #1e293b;
+
+  --text: oklch(87.1% 0.006 286.286); /* Zinc 300 */
+  --text-muted: oklch(70.5% 0.015 286.067); /* Zinc 400 */
+
+  --line: oklch(37.2% 0.044 257.287); /* Slate 700 */
+  --socials-link: oklch(87.1% 0.006 286.286); /* Zinc 300 */
+
+  --scrollbar-track: oklch(20.8% 0.042 265.755); /* Slate 900 */
+  --scrollbar-thumb: oklch(70.5% 0.015 286.067); /* Zinc 400 */
+  --scrollbar-thumb-hover: oklch(87.1% 0.006 286.286); /* Zinc 300 */
+
+  --toggle-background: oklch(87.1% 0.006 286.286); /* Zinc 300 */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}

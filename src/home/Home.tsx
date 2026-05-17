@@ -1,6 +1,6 @@
 import Hero from "./Hero";
 import About from "./About";
-import Projects from "./Projects";
+import Work from "./Work";
 import Experience from "./Experience";
 import Education from "./Education";
 import Contact from "./Contact";
@@ -10,7 +10,7 @@ export default function Home() {
     <main className="w-full h-full">
       <Hero />
       <About />
-      <Projects />
+      <Work />
       <Experience />
       <Education />
       <Contact />
