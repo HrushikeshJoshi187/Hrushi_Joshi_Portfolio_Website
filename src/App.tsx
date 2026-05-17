@@ -6,9 +6,9 @@ import Footer from "./components/Footer";
 import Socials from "./components/Socials";
 import Email from "./components/Email";
 
-import AskYourCrushOutOnline from "./projects/AskYourCrushOutOnline";
-import JohnDoePortfolio from "./projects/JohnDoePortfolio";
-import KevinRushPortfolio from "./projects/KevinRushPortfolio";
+// import AskYourCrushOutOnline from "./projects/AskYourCrushOutOnline";
+// import JohnDoePortfolio from "./projects/JohnDoePortfolio";
+// import KevinRushPortfolio from "./projects/KevinRushPortfolio";
 
 export default function App() {
   return (

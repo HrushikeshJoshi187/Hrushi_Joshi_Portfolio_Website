@@ -17,14 +17,14 @@ function ExperienceCard({ time, title, location, points }: ExperienceCardProps) 
       <div className="flex-1 pl-4 md:pl-12 border-l-1 border-[var(--divider)] ">
         <div className="font-bold text-text text-[clamp(1.5rem,2.8vw+0.5rem,1.75rem)]">{title}</div>
         <div className="italic text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-text-muted mb-4">{location}</div>
-        {/* <ul className="flex flex-col space-y-3">
+        <ul className="flex flex-col space-y-3">
           {points.map((point, index) => (
             <li key={index} className="flex items-start gap-3">
               <span className="[@media(max-width:300px)]:mt-2 mt-2.5 sm:mt-2.75 w-2 h-2 bg-[var(--primary)] rounded-full flex-shrink-0"></span>
               <span>{point}</span>
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </div>
   );

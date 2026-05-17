@@ -19,24 +19,7 @@ export default function Work() {
           />
         </figure>
 
-        <div className="flex-1 min-w-0 text-[clamp(1rem,2.8vw+0.5rem,1.25rem)]">
-          <p className="mb-4">
-            I’m a frontend engineer obsessed with building interfaces that just work, and look good doing it. My toolkit
-            spans React, TypeScript, Tailwind, Material-UI, and D3.js, and I love turning complex data and messy designs
-            into intuitive, accessible experiences.
-          </p>
-
-          <p className="mb-4">
-            Currently, I’m diving deeper into CS at the University of Illinois Chicago, modernizing dashboards and
-            upgrading legacy apps, one TypeScript migration at a time. Previously, I’ve tinkered with everything from 3D
-            dashboards to automated pipelines at places like Persistent Systems and Ingenio Care Inc.
-          </p>
-
-          <p>
-            When I’m not coding, I’m climbing mountains, swinging a tennis racket, or 3D printing something that
-            probably shouldn’t exist, all in the name of curiosity and creativity.
-          </p>
-        </div>
+        <div className="flex-1 min-w-0 text-[clamp(1rem,2.8vw+0.5rem,1.25rem)]"></div>
       </div>
     </section>
   );
