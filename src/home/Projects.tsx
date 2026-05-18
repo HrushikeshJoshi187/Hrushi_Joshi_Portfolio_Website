@@ -2,10 +2,10 @@ import SectionHeader from "../components/SectionHeader";
 
 import kevin_rush_portfolio from "/work/kevin_rush_portfolio.png";
 
-export default function Work() {
+export default function Projects() {
   return (
     <section
-      id="work"
+      id="projects"
       className="w-full px-4 sm:px-8 md:px-12 mx-auto xl:max-w-6xl pb-20 sm:pb-32 md:pb-40 lg:pb-60 xl:pb-80 overflow-hidden break-normal"
     >
       <SectionHeader number="02." title="Websites I’m Proud Of" />

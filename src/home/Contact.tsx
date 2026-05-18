@@ -6,7 +6,7 @@ export default function Contact() {
       id="contact"
       className="w-full px-4 sm:px-8 md:px-12 mx-auto xl:max-w-6xl pb-20 sm:pb-32 md:pb-40 lg:pb-60 xl:pb-80 overflow-hidden break-normal"
     >
-      <SectionHeader number="05." title="Get In Touch" />
+      <SectionHeader title="Get In Touch" />
 
       <div className="w-full flex flex-col items-center text-center mt-4">
         <h2 className="text-text text-[clamp(1.6rem,4.8vw+0.8rem,2rem)] font-semibold mb-4">

@@ -7,9 +7,11 @@ type EducationCardProps = { time: string; title: string; location: string; point
 function EducationCard({ time, title, location, points }: EducationCardProps) {
   return (
     <div className="w-full flex lg:flex-row flex-col items-start gap-4 lg:gap-0">
-      <div className="w-[250px] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-primary font-semibold mt-2">{time}</div>
+      <div className="w-[250px] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--primary)] font-semibold mt-2">
+        {time}
+      </div>
       <div className="flex-1 pl-4 md:pl-12 border-l-1 border-[var(--line)] ">
-        <div className="font-bold text-text text-[clamp(1.5rem,2.8vw+0.5rem,1.75rem)]">{title}</div>
+        <div className="font-bold text-text text-[clamp(1rem,2.8vw+0.5rem,1.25rem)]">{title}</div>
         <div className="italic text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-text-muted mb-4">{location}</div>
         <ul className="flex flex-col space-y-3">
           {points.map((point, index) => (
@@ -31,7 +33,7 @@ export default function Education() {
       id="education"
       className="w-full px-4 sm:px-8 md:px-12 mx-auto xl:max-w-6xl pb-20 sm:pb-32 md:pb-40 lg:pb-60 xl:pb-80 overflow-hidden break-normal"
     >
-      <SectionHeader number="04." title="What I’ve Learnt" />
+      <SectionHeader title="What I’ve Learnt" />
 
       <div className="flex flex-col gap-12 sm:gap-18 lg:gap-24 items-start mt-4">
         <EducationCard

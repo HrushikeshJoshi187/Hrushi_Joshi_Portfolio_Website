@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useTheme } from "../context/ThemeContext.tsx";
-import SectionHeader from "../components/SectionHeader";
+import SectionHeader from "../components/SectionHeader.tsx";
 
 type ExperienceCardProps = { time: string; title: string; location: string; points: React.ReactNode[] };
 
@@ -10,13 +10,13 @@ function ExperienceCard({ time, title, location, points }: ExperienceCardProps) 
   return (
     <div className="w-full flex lg:flex-row flex-col items-start gap-4 lg:gap-0">
       <div
-        className={`w-[250px] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--primary)] mt-2 ${theme === "dark" ? "" : "font-bold"}`}
+        className={`w-[250px] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--primary)] ${theme === "dark" ? "" : "font-bold"}`}
       >
         {time}
       </div>
-      <div className="flex-1 pl-4 md:pl-12 border-l-1 border-[var(--divider)] ">
-        <div className="font-bold text-text text-[clamp(1.5rem,2.8vw+0.5rem,1.75rem)]">{title}</div>
-        <div className="italic text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-text-muted mb-4">{location}</div>
+      <div className="flex-1 pl-4 md:pl-12 border-l-1 border-[var(--line)] ">
+        <div className="font-bold text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--text)]">{title}</div>
+        <div className="italic text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--text-muted)] mb-4">{location}</div>
         <ul className="flex flex-col space-y-3">
           {points.map((point, index) => (
             <li key={index} className="flex items-start gap-3">
@@ -36,7 +36,7 @@ export default function Experience() {
       id="experience"
       className="w-full px-4 sm:px-8 md:px-12 mx-auto xl:max-w-6xl pb-20 sm:pb-32 md:pb-40 lg:pb-60 xl:pb-80 overflow-hidden break-normal"
     >
-      <SectionHeader number="03." title="Where I’ve Worked" />
+      <SectionHeader title="Where I’ve Worked" />
 
       <div className="flex flex-col gap-12 sm:gap-18 lg:gap-24 items-start mt-4">
         <ExperienceCard
@@ -54,19 +54,6 @@ export default function Experience() {
             <>
               Redesigned dashboards using insights from 17 visualization studies, creating 4 new comparison-focused
               concepts for intuitive data exploration.
-            </>,
-          ]}
-        />
-
-        <ExperienceCard
-          time="May 2025 – Dec 2025"
-          title="Building Services Aide"
-          location="University of Illinois at Chicago, Chicago, IL"
-          points={[
-            <>Mastered time management, juggling multiple tasks and deadlines without losing focus or productivity.</>,
-            <>
-              Interviewed candidates and provided structured feedback, helping hire top-quality, culturally aligned
-              talent.
             </>,
           ]}
         />

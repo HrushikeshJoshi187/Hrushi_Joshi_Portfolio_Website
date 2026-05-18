@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Logo() {
   return (
-    <div className="text-text-muted text-[40px] font-extrabold italic">
-      <a href="/" className="hover:text-text transition-colors duration-300 ease-in-out">
+    <div className="text-[var(--text)] text-[40px] font-extrabold italic">
+      <Link
+        to="/"
+        className="inline-block origin-center hover:text-[var(--primary)] hover:scale-105 transition-all duration-300 ease-in-out"
+      >
         Hj
-      </a>
+      </Link>
     </div>
   );
 }

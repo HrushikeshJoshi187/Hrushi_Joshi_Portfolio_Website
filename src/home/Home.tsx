@@ -1,18 +1,12 @@
-import Hero from "./Hero";
-import About from "./About";
-import Work from "./Work";
-import Experience from "./Experience";
-import Education from "./Education";
-import Contact from "./Contact";
+import Hero from "./Hero.tsx";
+import Projects from "./Projects.tsx";
+import Contact from "./Contact.tsx";
 
 export default function Home() {
   return (
     <main className="w-full h-full">
       <Hero />
-      <About />
-      <Work />
-      <Experience />
-      <Education />
+      <Projects />
       <Contact />
     </main>
   );

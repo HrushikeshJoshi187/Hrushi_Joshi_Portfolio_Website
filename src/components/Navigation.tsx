@@ -1,59 +1,72 @@
 import { useState } from "react";
+import { Link, useLocation, type Location } from "react-router-dom";
 
 import { useTheme, type Theme } from "../context/ThemeContext.tsx";
 import ThemeToggle from "./ThemeToggle.tsx";
 
 const navItems = [
-  { id: "about", label: "About", number: "01" },
-  { id: "work", label: "Work", number: "02" },
-  { id: "experience", label: "Experience", number: "03" },
-  { id: "education", label: "Education", number: "04" },
-  { id: "contact", label: "Contact", number: "05" },
+  { id: "home", label: "Home" },
+  { id: "work", label: "Work" },
+  { id: "about", label: "About" },
+  { id: "blog", label: "Blog" },
 ];
 
-const renderNavLinks = ({ mobile = false, theme }: { mobile?: boolean; theme: Theme }) =>
+const renderNavLinks = ({ mobile = false, theme, location }: { mobile?: boolean; theme: Theme; location: Location }) =>
   navItems.map((item) => (
     <li key={item.id}>
-      <a
-        href={`#${item.id}`}
-        className={`
-          hover:text-[var(--link)]
+      <Link
+        to={`/${item.id === "home" ? "" : item.id}`}
+        className={`relative inline-block origin-center hover:text-[var(--primary)] hover:scale-105 transition-all duration-300 ease-in-out
+          after:content-['']
+          after:absolute
+          after:left-1/2
+          after:bottom-0
+          after:h-[2px]
+          after:bg-[var(--primary)]
+          after:transition-all
+          after:duration-300
+          after:ease-in-out
+          after:-translate-x-1/2
+
+          ${theme === "dark" ? "" : ""}
+
+          ${
+            location.pathname === `/${item.id === "home" ? "" : item.id}`
+              ? "text-[var(--primary)] after:w-full"
+              : "text-[var(--text)] after:w-0 hover:after:w-full"
+          }
+
           ${mobile ? "flex-1 text-center" : ""}
         `}
       >
-        <span className={`font-mono ${theme === "dark" ? "font-semibold" : "font-bold"} text-[var(--primary)]`}>
-          {item.number}.
-        </span>
-
         {mobile ? <br /> : " "}
 
         {item.label}
-      </a>
+      </Link>
     </li>
   ));
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
   const { theme } = useTheme();
-
-  console.log(theme);
+  const location = useLocation();
 
   return (
     <nav className="relative z-50">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-end">
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-6 text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--link)]">
-          {renderNavLinks({ mobile: false, theme })}
+        <ul className="hidden lg:flex items-center gap-10 text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--link)]">
+          {renderNavLinks({ mobile: false, theme, location })}
 
           <li>
-            <a
-              href="/resume/Hrushikesh_Joshi_s_Resume.pdf"
+            <Link
+              to="/resume/Hrushikesh_Joshi_s_Resume.pdf"
               target="_blank"
               rel="noopener"
               className="border-2 border-[var(--primary)] p-2 rounded-md text-[var(--primary)] hover:text-[var(--text-muted)] hover:border-[var(--text-muted)]"
             >
               Resume
-            </a>
+            </Link>
           </li>
 
           <li>
@@ -90,17 +103,17 @@ export default function Navigation() {
         }`}
       >
         <ul className="w-full h-full flex flex-col items-center justify-center gap-6 text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--text-muted)] text-center">
-          {renderNavLinks({ mobile: true, theme })}
+          {renderNavLinks({ mobile: true, theme, location })}
 
           <li className="mt-4">
-            <a
-              href="/resume/Hrushikesh_Joshi_s_Resume.pdf"
+            <Link
+              to="/resume/Hrushikesh_Joshi_s_Resume.pdf"
               target="_blank"
               rel="noopener"
               className="border-2 border-[var(--primary)] p-2 rounded-md text-[var(--primary)] hover:text-[var(--text-muted)] hover:border-[var(--text-muted)]"
             >
               Resume
-            </a>
+            </Link>
           </li>
 
           <li className="mt-4">
