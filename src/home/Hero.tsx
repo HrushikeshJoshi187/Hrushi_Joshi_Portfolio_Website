@@ -7,7 +7,7 @@ export default function Hero() {
         Hrushikesh Joshi.
       </h1>
 
-      <h2 className="text-text-muted font-bold leading-tight text-[clamp(1.6rem,4.8vw+0.8rem,3.2rem)] tracking-tight">
+      <h2 className="text-text-muted font-bold leading-tight text-[clamp(1.6rem,4.8vw+0.8rem,3.2rem)] tracking-tight mb-20">
         Creating exceptional experiences.
       </h2>
     </section>

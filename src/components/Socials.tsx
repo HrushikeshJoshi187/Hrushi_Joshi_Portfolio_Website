@@ -107,7 +107,7 @@ export default function Socials() {
           </svg>
         </a>
 
-        <div className="w-px h-15 bg-[var(--line)]"></div>
+        <div className="w-px h-15 bg-[var(--line)] mb-20"></div>
       </div>
     </div>
   );

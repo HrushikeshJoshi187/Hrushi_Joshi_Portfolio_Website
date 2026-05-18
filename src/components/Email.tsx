@@ -9,7 +9,7 @@ export default function Email() {
         >
           hrushikesh.joshi.187@gmail.com
         </a>
-        <div aria-hidden="true" className="w-px h-15 bg-[var(--line)]"></div>
+        <div aria-hidden="true" className="w-px h-15 bg-[var(--line)] mb-20"></div>
       </div>
     </div>
   );
