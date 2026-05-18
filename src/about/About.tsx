@@ -6,8 +6,8 @@ export default function About() {
   return (
     <main className="w-full h-full">
       <AboutMe />
-      <Experience />
       <Education />
+      <Experience />
     </main>
   );
 }

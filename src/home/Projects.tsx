@@ -1,21 +1,50 @@
 import SectionHeader from "../components/SectionHeader";
 
-import kevin_rush_portfolio from "/work/kevin_rush_portfolio.png";
+type ProjectCardProps = { title: string; description: string; image: string; className?: string };
 
-function ProjectCard({ title, description, image }: { title: string; description: string; image: string }) {
+const ProjectCard = ({ title, description, image, className = "" }: ProjectCardProps) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
-      <figure className="w-full lg:w-[300px] rounded-2xl overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover rounded-4xl" />
-      </figure>
+    <div
+      className={`group relative overflow-hidden rounded-4xl shadow-md 
+        bg-cover bg-center 
+        bg-contain bg-no-repeat
+        ${className}`}
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      <div
+        className="
+          absolute inset-0
+          bg-sky-700/70
+          opacity-0
+          group-hover:opacity-100
+          transition-opacity duration-300
+        "
+      />
 
-      <div className="flex-1 min-w-0 text-[clamp(1rem,2.8vw+0.5rem,1.25rem)]">
-        <div className="font-bold text-[var(--text)] text-[clamp(1.25rem,3vw+0.5rem,1.75rem)] mb-2">{title}</div>
-        <div className="text-[var(--text-muted)]">{description}</div>
+      <div
+        className="
+          absolute inset-0
+          flex flex-col justify-end
+          p-6
+          bg-white/5
+          backdrop-blur-xl
+          border border-white/10
+          opacity-0
+          group-hover:opacity-100
+          transition-all duration-300
+        "
+      >
+        <h3 className="text-white text-2xl font-semibold mb-2">{title}</h3>
+
+        <p className="text-white/90 text-sm max-w-md">{description}</p>
+
+        <div className="rounded-lg bg-white flex p-2 mt-4">
+          <img src="/skills/react.svg" alt="View Project" className="w-4 h-4" />
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default function Projects() {
   return (
@@ -25,11 +54,61 @@ export default function Projects() {
     >
       <SectionHeader title="Websites I’m Proud Of" />
 
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 ">
+      <div className="grid grid-cols-12 auto-rows-[180px] gap-5 w-full mt-5">
         <ProjectCard
           title="Kevin Rush Portfolio"
-          description="A modern portfolio website showcasing Kevin Rush's work and skills."
-          image={kevin_rush_portfolio}
+          description="A modern portfolio experience built with React and Tailwind."
+          image="/work/SAR.png"
+          className="col-span-12 md:col-span-8 row-span-2"
+        />
+
+        <ProjectCard
+          title="Analytics Dashboard"
+          description="Interactive data visualizations with D3.js."
+          image="/work/ask_your_crush_out_online.png"
+          className="col-span-12 md:col-span-4 row-span-2"
+        />
+
+        <ProjectCard
+          title="Flavor Charter App and Dashboard"
+          description="Reusable component architecture and design system."
+          image="/work/flavor_charter.png"
+          className="col-span-12 md:col-span-3 row-span-2"
+        />
+
+        <ProjectCard
+          title="Finance Platform"
+          description="Responsive financial management dashboard."
+          image="/work/simpligami.png"
+          className="col-span-12 md:col-span-6 row-span-2"
+        />
+
+        <ProjectCard
+          title="3D Experience"
+          description="Interactive WebGL and motion-based experiences."
+          image="/work/rhythpic2.png"
+          className="col-span-12 md:col-span-3 row-span-2"
+        />
+
+        <ProjectCard
+          title="Finance Platform"
+          description="Responsive financial management dashboard."
+          image="/work/kevin_rush_portfolio.jpg"
+          className="col-span-12 md:col-span-3 row-span-2"
+        />
+
+        <ProjectCard
+          title="Forever"
+          description="Interactive WebGL and motion-based experiences."
+          image="/work/forever.png"
+          className="col-span-12 md:col-span-6 row-span-2"
+        />
+
+        <ProjectCard
+          title="John Doe Portfolio"
+          description="Responsive financial management dashboard."
+          image="/work/john_doe_portfolio.png"
+          className="col-span-12 md:col-span-3 row-span-2"
         />
       </div>
     </section>

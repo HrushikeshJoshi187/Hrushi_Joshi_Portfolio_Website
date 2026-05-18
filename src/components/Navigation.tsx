@@ -86,7 +86,7 @@ export default function Navigation() {
         {/* Hamburger */}
         <button className="lg:hidden relative z-100 w-6 h-6" onClick={() => setOpen(!open)}>
           <span
-            className={`absolute left-0 w-6 h-0.5 bg-[var(--text)] transition-all duration-300 top-1/2 -translate-y-1/2 ${open ? "rotate-45" : "-translate-y-2"}`}
+            className={`absolute left-0 w-6 h-0.5 bg-[var(--text)] transition-all duration-300 top-1/2 -translate-y-1/2 ${open ? "rotate-45" : "-translate-y-2.5"}`}
           />
 
           <span
@@ -132,13 +132,13 @@ export default function Navigation() {
           <li className="min-w-0">
             <a
               href="mailto:hrushikesh.joshi.187@gmail.com"
-              className="inline-block origin-center text-[var(--text-muted)] hover:text-[var(--primary)] text-[clamp(0.875rem,2.8vw+0.4rem,1rem)] transition-all duration-300 ease-in-out hover:text-[var(--primary)] hover:scale-105 transition-transform duration-300 font-semibold"
+              className="inline-block origin-center text-[var(--text)] hover:text-[var(--primary)] text-[clamp(0.875rem,2.8vw+0.4rem,1rem)] transition-all duration-300 ease-in-out hover:text-[var(--primary)] hover:scale-105 transition-transform duration-300 font-semibold"
             >
               hrushikesh.joshi.187@gmail.com
             </a>
           </li>
 
-          <li className="w-full h-px flex gap-5 items-center justify-center mt-3">
+          <li className="w-full h-px flex gap-5 items-center justify-center mt-3 text-[var(--text)]">
             <a
               href="https://github.com/HrushikeshJoshi187"
               target="_blank"
