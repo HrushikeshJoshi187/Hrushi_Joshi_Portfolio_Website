@@ -5,7 +5,7 @@ type ProjectCardProps = { title: string; description: string; image: string; cla
 const ProjectCard = ({ title, description, image, className = "" }: ProjectCardProps) => {
   return (
     <div
-      className={`group relative overflow-hidden rounded-4xl shadow-md 
+      className={`group relative overflow-hidden rounded-4xl shadow-lg 
         bg-cover bg-center 
         bg-contain bg-no-repeat
         ${className}`}
@@ -52,62 +52,83 @@ export default function Projects() {
       id="projects"
       className="w-full px-4 sm:px-8 md:px-12 mx-auto xl:max-w-6xl pb-20 sm:pb-32 md:pb-40 lg:pb-60 xl:pb-80 overflow-hidden break-normal"
     >
-      <SectionHeader title="Websites I’m Proud Of" />
+      <SectionHeader title="Projects I’m Proud Of" />
 
       <div className="grid grid-cols-12 auto-rows-[180px] gap-5 w-full mt-5">
         <ProjectCard
-          title="Kevin Rush Portfolio"
-          description="A modern portfolio experience built with React and Tailwind."
+          title="SAR Visualization"
+          description=""
           image="/work/SAR.png"
           className="col-span-12 md:col-span-8 row-span-2"
         />
 
         <ProjectCard
-          title="Analytics Dashboard"
-          description="Interactive data visualizations with D3.js."
+          title="Ask Your Crush Out Online"
+          description=""
           image="/work/ask_your_crush_out_online.png"
           className="col-span-12 md:col-span-4 row-span-2"
         />
 
         <ProjectCard
-          title="Flavor Charter App and Dashboard"
-          description="Reusable component architecture and design system."
+          title="Flavor Charter"
+          description=""
           image="/work/flavor_charter.png"
           className="col-span-12 md:col-span-3 row-span-2"
         />
 
         <ProjectCard
-          title="Finance Platform"
-          description="Responsive financial management dashboard."
+          title="Simpligami"
+          description=""
           image="/work/simpligami.png"
           className="col-span-12 md:col-span-6 row-span-2"
         />
 
         <ProjectCard
-          title="3D Experience"
-          description="Interactive WebGL and motion-based experiences."
+          title="Rhythpic"
+          description=""
           image="/work/rhythpic2.png"
           className="col-span-12 md:col-span-3 row-span-2"
         />
 
         <ProjectCard
-          title="Finance Platform"
-          description="Responsive financial management dashboard."
+          title="Kevin Rush Portfolio"
+          description=""
           image="/work/kevin_rush_portfolio.jpg"
           className="col-span-12 md:col-span-3 row-span-2"
         />
 
         <ProjectCard
           title="Forever"
-          description="Interactive WebGL and motion-based experiences."
+          description=""
           image="/work/forever.png"
           className="col-span-12 md:col-span-6 row-span-2"
         />
 
         <ProjectCard
           title="John Doe Portfolio"
-          description="Responsive financial management dashboard."
+          description=""
           image="/work/john_doe_portfolio.png"
+          className="col-span-12 md:col-span-3 row-span-2"
+        />
+
+        <ProjectCard
+          title="Led Cube"
+          description=""
+          image="/work/led.jpg"
+          className="col-span-12 md:col-span-6 row-span-2"
+        />
+
+        <ProjectCard
+          title="3D Printer"
+          description=""
+          image="/work/3d.jpg"
+          className="col-span-12 md:col-span-3 row-span-2"
+        />
+
+        <ProjectCard
+          title="Quadcopter"
+          description=""
+          image="/work/quadcopter.jpg"
           className="col-span-12 md:col-span-3 row-span-2"
         />
       </div>

@@ -9,6 +9,7 @@ import Home from "./home/Home.tsx";
 import Work from "./work/Work.tsx";
 import About from "./about/About.tsx";
 import Blog from "./blog/Blog.tsx";
+import Snips from "./snips/Snips.tsx";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/work" element={<Work />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/snips" element={<Snips />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <Footer />

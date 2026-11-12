@@ -1,6 +1,8 @@
 @theme {
   --primary: oklch(50% 0.134 242.749); /* Sky 700 */
 
+  --surface: oklch(92.8% 0.006 264.531); /* Zinc 200 */
+
   --background: oklch(96.7% 0.001 286.375); /* Zinc 100 */
 
   --text: oklch(14.1% 0.005 285.823); /* Zinc 950 */
@@ -18,6 +20,8 @@
 /* Dark theme */
 .dark {
   --primary: oklch(82.8% 0.111 230.318); /* Sky 300 */
+
+  --surface: oklch(27.9% 0.041 260.031); /* Slate 800 */
 
   --background: oklch(20.8% 0.042 265.755); /* Slate 900 */
 
