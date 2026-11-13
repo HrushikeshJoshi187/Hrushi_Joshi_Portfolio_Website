@@ -1,5 +1,4 @@
 import SectionHeader from "../components/SectionHeader.tsx";
-import { useTheme } from "../context/ThemeContext.tsx";
 
 interface SkillCardProps {
   skill_logo: string;
@@ -22,8 +21,6 @@ function SkillCard({ skill_logo, skill_name, skill_description }: SkillCardProps
 }
 
 export default function Skills() {
-  const { theme } = useTheme();
-
   return (
     <section
       id="skills"
