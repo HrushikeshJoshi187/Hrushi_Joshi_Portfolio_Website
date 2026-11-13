@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import Navigation from "./Navigation";
-import Logo from "./Logo";
+import Navigation from "./Navigation.tsx";
+import Logo from "./Logo.tsx";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);

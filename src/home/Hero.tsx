@@ -1,10 +1,13 @@
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../context/ThemeContext.tsx";
 
 export default function Hero() {
   const { theme } = useTheme();
 
   return (
-    <section className="w-full min-h-[calc(100vh-80px)] px-4 sm:px-8 md:px-12 mx-auto xl:max-w-6xl flex flex-col justify-center gap-2 md:gap-4 overflow-hidden break-normal">
+    <section
+      id="hero"
+      className="w-full min-h-[calc(100vh-80px)] px-4 sm:px-8 md:px-12 mx-auto xl:max-w-6xl flex flex-col justify-center gap-2 md:gap-4 overflow-hidden break-normal"
+    >
       <p
         className={`font-semibold ${theme === "dark" ? "text-[var(--primary)]" : "text-[var(--text)]"} text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] tracking-wide font-bold`}
       >

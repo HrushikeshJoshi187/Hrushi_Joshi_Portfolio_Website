@@ -38,7 +38,7 @@ export default function Experience() {
     >
       <SectionHeader title="Where I’ve Worked" />
 
-      <div className="flex flex-col gap-12 sm:gap-18 lg:gap-24 items-start mt-4">
+      <div className="flex flex-col gap-12 sm:gap-18 lg:gap-24 items-start mt-5">
         <ExperienceCard
           time="Dec 2025 – Present"
           title="Graduate Research Assistant"

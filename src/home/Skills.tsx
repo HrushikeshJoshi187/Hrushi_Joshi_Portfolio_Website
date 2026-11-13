@@ -31,7 +31,7 @@ export default function Skills() {
     >
       <SectionHeader title="Skills I've Acquired" />
 
-      <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
+      <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] mt-5">
         <SkillCard key="skills_react" skill_logo="./skills/react.svg" skill_name="React" skill_description="" />
         <SkillCard
           key="skills_react_native"

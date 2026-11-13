@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div className="flex-2 flex flex-row flex-wrap gap-12 lg:gap-24">
-          <div className="flex-1 flex flex-col items-start justify-start">
+          <nav className="flex-1 flex flex-col items-start justify-start">
             <h3 className="text-[var(--text)] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] font-semibold mb-2">Sitemap</h3>
             <ul className="space-y-1 text-[var(--text-muted)]">
               <li>
@@ -43,9 +43,9 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
-          <div className="flex-1 flex flex-col items-start justify-start">
+          <nav className="flex-1 flex flex-col items-start justify-start">
             <h3 className="text-[var(--text)] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] font-semibold mb-2">Socials</h3>
             <ul className="space-y-1 text-[var(--text-muted)]">
               <li>
@@ -99,15 +99,15 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
 
       <div className="flex items-center w-full justify-between gap-12">
         <Logo />
-        <div className="text-[clamp(0.875rem,2.8vw+0.4rem,1rem)] text-[var(--text-muted)]">
+        <small className="text-[clamp(0.875rem,2.8vw+0.4rem,1rem)] text-[var(--text-muted)]">
           © {new Date().getFullYear()} Hrushi Joshi. All rights reserved.
-        </div>
+        </small>
       </div>
     </footer>
   );

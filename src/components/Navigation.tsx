@@ -72,7 +72,7 @@ export default function Navigation() {
               to="/resume/Hrushikesh_Joshi_s_Resume.pdf"
               target="_blank"
               rel="noopener"
-              className="border-2 border-[var(--primary)] p-2 rounded-md text-[var(--primary)] hover:text-[var(--text-muted)] hover:border-[var(--text-muted)]"
+              className="border-2 border-[var(--primary)] p-2 rounded-md text-[var(--primary)] hover:text-[var(--text)] hover:border-[var(--text)] transition-all duration-300"
             >
               Resume
             </Link>

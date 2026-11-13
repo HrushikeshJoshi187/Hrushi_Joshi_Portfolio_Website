@@ -1,17 +1,22 @@
 import React from "react";
 
+import { useTheme } from "../context/ThemeContext.tsx";
 import SectionHeader from "../components/SectionHeader.tsx";
 
 type EducationCardProps = { time: string; title: string; location: string; points: React.ReactNode[] };
 
 function EducationCard({ time, title, location, points }: EducationCardProps) {
+  const { theme } = useTheme();
+
   return (
     <div className="w-full flex lg:flex-row flex-col items-start gap-4 lg:gap-0">
-      <div className="w-[250px] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--primary)] font-semibold mt-2">
+      <div
+        className={`w-[250px] text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--primary)] ${theme === "dark" ? "" : "font-bold"}`}
+      >
         {time}
       </div>
       <div className="flex-1 pl-4 md:pl-12 border-l-1 border-[var(--line)] ">
-        <div className="font-bold text-text text-[clamp(1rem,2.8vw+0.5rem,1.25rem)]">{title}</div>
+        <div className="font-bold text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-[var(--text)]">{title}</div>
         <div className="italic text-[clamp(1rem,2.8vw+0.5rem,1.25rem)] text-text-muted mb-4">{location}</div>
         <ul className="flex flex-col space-y-3">
           {points.map((point, index) => (
@@ -35,7 +40,7 @@ export default function Education() {
     >
       <SectionHeader title="What I’ve Learnt" />
 
-      <div className="flex flex-col gap-12 sm:gap-18 lg:gap-24 items-start mt-4">
+      <div className="flex flex-col gap-12 sm:gap-18 lg:gap-24 items-start mt-5">
         <EducationCard
           time="Aug 2024 – May 2026"
           title="Master of Science in Computer Science"

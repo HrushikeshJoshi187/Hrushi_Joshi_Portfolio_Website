@@ -1,4 +1,4 @@
-import SectionHeader from "../components/SectionHeader";
+import SectionHeader from "../components/SectionHeader.tsx";
 
 type ProjectCardProps = { title: string; description: string; image: string; className?: string };
 
@@ -14,7 +14,9 @@ const ProjectCard = ({ title, description, image, className = "" }: ProjectCardP
       <div
         className="
           absolute inset-0
-          bg-sky-700/70
+          bg-gradient-to-b
+          from-sky-700/0
+          to-75% to-sky-700/100
           opacity-0
           group-hover:opacity-100
           transition-opacity duration-300
@@ -27,20 +29,19 @@ const ProjectCard = ({ title, description, image, className = "" }: ProjectCardP
           flex flex-col justify-end
           p-6
           bg-white/5
-          backdrop-blur-xl
+          backdrop-blur-[1px]
           border border-white/10
           opacity-0
           group-hover:opacity-100
           transition-all duration-300
         "
       >
-        <h3 className="text-white text-2xl font-semibold mb-2">{title}</h3>
+        <h3 className="text-white text-2xl font-semibold mb-2">
+          {title}
+          <span className="ml-2">↗</span>
+        </h3>
 
         <p className="text-white/90 text-sm max-w-md">{description}</p>
-
-        <div className="rounded-lg bg-white flex p-2 mt-4">
-          <img src="/skills/react.svg" alt="View Project" className="w-4 h-4" />
-        </div>
       </div>
     </div>
   );
@@ -90,12 +91,12 @@ export default function Projects() {
           className="col-span-12 md:col-span-3 row-span-2"
         />
 
-        <ProjectCard
+        {/* <ProjectCard
           title="Kevin Rush Portfolio"
           description=""
           image="/work/kevin_rush_portfolio.jpg"
           className="col-span-12 md:col-span-3 row-span-2"
-        />
+        /> */}
 
         <ProjectCard
           title="Forever"
@@ -104,12 +105,12 @@ export default function Projects() {
           className="col-span-12 md:col-span-6 row-span-2"
         />
 
-        <ProjectCard
+        {/* <ProjectCard
           title="John Doe Portfolio"
           description=""
           image="/work/john_doe_portfolio.png"
           className="col-span-12 md:col-span-3 row-span-2"
-        />
+        /> */}
 
         <ProjectCard
           title="Led Cube"
@@ -118,19 +119,19 @@ export default function Projects() {
           className="col-span-12 md:col-span-6 row-span-2"
         />
 
-        <ProjectCard
+        {/* <ProjectCard
           title="3D Printer"
           description=""
           image="/work/3d.jpg"
           className="col-span-12 md:col-span-3 row-span-2"
-        />
+        /> */}
 
-        <ProjectCard
+        {/* <ProjectCard
           title="Quadcopter"
           description=""
           image="/work/quadcopter.jpg"
           className="col-span-12 md:col-span-3 row-span-2"
-        />
+        /> */}
       </div>
     </section>
   );
