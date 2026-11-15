@@ -8,7 +8,7 @@ export default function ScrollToTop() {
     if (hash) {
       const id = decodeURIComponent(hash.slice(1));
 
-      document.getElementById(id)?.scrollIntoView({ behavior: "instant", block: "start" });
+      document.getElementById(id)?.scrollIntoView({ behavior: "instant", block: "center" });
     } else {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }

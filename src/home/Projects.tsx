@@ -79,7 +79,7 @@ export default function Projects() {
           id="flavor-charter"
           title="Flavor Charter"
           description=""
-          image="/work/flavor_charter.png"
+          image="/work/flavor_charter.jpg"
           className="col-span-12 md:col-span-3 row-span-2"
         />
 

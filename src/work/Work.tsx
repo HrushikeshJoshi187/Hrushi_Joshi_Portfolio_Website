@@ -11,18 +11,18 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ id, title, description, image, website, source }: ProjectCardProps) => {
   return (
-    <div id={id} className="group flex flex-col md:flex-row">
-      <div className="relative w-full md:w-[600px] h-[400px] rounded-4xl shadow-lg ">
+    <div id={id} className="flex flex-col xl:flex-row gap-10 lg:gap-20">
+      <div className="relative w-full min-w-[300px] max-w-[600px] aspect-video rounded-4xl shadow-lg">
         <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-4xl border-2 border-[var(--primary)]" />
         <img src={image} alt={title} className="relative w-full h-full rounded-4xl object-cover" />
       </div>
 
-      <div className="flex flex-1 flex-col pl-20 p-5">
+      <div className="flex flex-1 flex-col">
         <h3 className="text-[clamp(1.6rem,4.8vw+0.8rem,2rem)] font-semibold text-[var(--text)]">{title}</h3>
 
         {description && <p className="mb-10">{description}</p>}
 
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           <a className="inline-flex items-center gap-2 border-2 border-[var(--primary)] px-6 py-3 rounded-md text-[var(--primary)] transition-all duration-300 hover:text-[var(--text)] hover:border-[var(--text)]">
             Desgin <span>→</span>
           </a>
@@ -81,6 +81,15 @@ export default function Work() {
           />
 
           <ProjectCard
+            id="flavor-charter"
+            title="Flavor Charter"
+            description="Developed an interactive data visualization tool to explore multivariate flavor perception patterns, outliers, and demographic differences across food preferences."
+            image="/work/flavor_charter_dashboard.png"
+            website="https://flavorcharter.org/"
+            source="https://github.com/francescobotto/FlavorCharterInfo"
+          />
+
+          <ProjectCard
             id="ask-your-crush"
             title="Ask Your Crush Out Online"
             description="Built a user-friendly React + TypeScript web app for personalized online date proposals, featuring simplified customization and automated email notifications for responses."
@@ -90,19 +99,10 @@ export default function Work() {
           />
 
           <ProjectCard
-            id="flavor-charter"
-            title="Flavor Charter"
-            description="Developed an interactive data visualization tool to explore multivariate flavor perception patterns, outliers, and demographic differences across food preferences."
-            image="/work/flavor_charter.png"
-            website="https://flavorcharter.org/"
-            source="https://github.com/francescobotto/FlavorCharterInfo"
-          />
-
-          <ProjectCard
             id="rhythpic"
             title="Rhythpic"
             description="Developed an AI-powered music visualization platform using React and Node.js, generating synchronized images from Spotify lyrics with Stable Diffusion."
-            image="/work/rhythpic2.png"
+            image="/work/rhythpic.png"
             website="https://rhythpic-front.onrender.com"
             source="https://github.com/skris56uic/RhythPic"
           />
@@ -111,7 +111,7 @@ export default function Work() {
             id="kevin-rush-portfolio"
             title="Kevin Rush Portfolio"
             description="Built a responsive website using Tailwind CSS, TypeScript, and Framer Motion, exploring modern UI design and smooth animations."
-            image="/work/kevin_rush_portfolio.jpg"
+            image="/work/kevin_rush_portfolio.png"
             website="https://kevinrushportfoliowebsite.netlify.app"
             source="https://github.com/HrushikeshJoshi187/Kevin_Rush_Portfolio_Website"
           />
@@ -134,14 +134,28 @@ export default function Work() {
             source="http://github.com/HrushikeshJoshi187/John_Doe_Portfolio_Website"
           />
 
-          <ProjectCard id="led-cube" title="Led Cube" description="" image="/work/led.jpg" website="" source="" />
+          <ProjectCard
+            id="led-cube"
+            title="Led Cube"
+            description="Designed and built an 8×8×8 programmable LED cube using flip-flop registers and an Arduino microcontroller, implementing layer-by-layer multiplexing and persistence of vision to create 3D light patterns."
+            image="/work/led.jpg"
+            website=""
+            source=""
+          />
 
-          <ProjectCard id="3d-printer" title="3D Printer" description="" image="/work/3d.jpg" website="" source="" />
+          <ProjectCard
+            id="3d-printer"
+            title="3D Printer"
+            description="Designed and built a custom 3D printer from scratch using wood and drawer sliders, implementing G-code-based motion control and calibration to achieve 0.2 mm printing precision."
+            image="/work/3d.jpg"
+            website=""
+            source=""
+          />
 
           <ProjectCard
             id="quadcopter"
             title="Quadcopter"
-            description=""
+            description="Designed and implemented a self-stabilizing quadcopter by developing a flight controller, RF transmitter and receiver, and PID-based control system."
             image="/work/quadcopter.jpg"
             website=""
             source=""
