@@ -1,3 +1,5 @@
+import { useTheme } from "../context/ThemeContext.tsx";
+
 import SectionHeader from "../components/SectionHeader.tsx";
 
 interface SkillCardProps {
@@ -21,6 +23,8 @@ function SkillCard({ skill_logo, skill_name, skill_description }: SkillCardProps
 }
 
 export default function Skills() {
+  const { theme } = useTheme();
+
   return (
     <section
       id="skills"
@@ -43,7 +47,12 @@ export default function Skills() {
           skill_name="Tailwind CSS"
           skill_description=""
         />
-        <SkillCard key="skills_threejs" skill_logo="./skills/three.svg" skill_name="Three.js" skill_description="" />
+        {theme == "dark" && (
+          <SkillCard key="skills_threejs" skill_logo="./skills/three2.svg" skill_name="Three.js" skill_description="" />
+        )}
+        {theme != "dark" && (
+          <SkillCard key="skills_threejs" skill_logo="./skills/three.svg" skill_name="Three.js" skill_description="" />
+        )}
         <SkillCard key="skills_html" skill_logo="./skills/html.svg" skill_name="HTML" skill_description="" />
         <SkillCard key="skills_css" skill_logo="./skills/css.svg" skill_name="CSS" skill_description="" />
       </div>
@@ -67,7 +76,17 @@ export default function Skills() {
           skill_name="Playwright"
           skill_description=""
         />
-        <SkillCard key="skills_cypress" skill_logo="./skills/cypress.svg" skill_name="Cypress" skill_description="" />
+        {theme == "dark" && (
+          <SkillCard key="skills_cypress" skill_logo="./skills/cypress.svg" skill_name="Cypress" skill_description="" />
+        )}
+        {theme != "dark" && (
+          <SkillCard
+            key="skills_cypress2"
+            skill_logo="./skills/cypress2.svg"
+            skill_name="Cypress"
+            skill_description=""
+          />
+        )}
       </div>
 
       <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] mt-10">

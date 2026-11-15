@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop.tsx";
 import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
 import Socials from "./components/Socials.tsx";
@@ -13,24 +14,27 @@ import Snips from "./snips/Snips.tsx";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen w-full flex flex-col text-[var(--text-muted)] bg-[var(--background)] text-[clamp(0.875rem,calc(2.8vw+0.5rem),1.25rem)]">
-      <Header />
+    <>
+      <ScrollToTop />
+      <div className="relative min-h-screen w-full flex flex-col text-[var(--text-muted)] bg-[var(--background)] text-[clamp(0.875rem,calc(2.8vw+0.5rem),1.25rem)]">
+        <Header />
 
-      <div className="flex">
-        <Socials />
-        <div className="w-full h-full flex-1 flex flex-col">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/snips" element={<Snips />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-          <Footer />
+        <div className="flex">
+          <Socials />
+          <div className="w-full h-full flex-1 flex flex-col">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/snips" element={<Snips />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+            <Footer />
+          </div>
+          <Email />
         </div>
-        <Email />
       </div>
-    </div>
+    </>
   );
 }

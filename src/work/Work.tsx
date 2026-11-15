@@ -1,31 +1,52 @@
 import SectionHeader from "../components/SectionHeader.tsx";
 
-type ProjectCardProps = { title: string; description: string; image: string };
+type ProjectCardProps = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  website: string;
+  source: string;
+};
 
-const ProjectCard = ({ title, description, image }: ProjectCardProps) => {
+const ProjectCard = ({ id, title, description, image, website, source }: ProjectCardProps) => {
   return (
-    <div className="group flex flex-col md:flex-row">
-      <div className="relative w-full md:w-[600px] h-[400px]">
+    <div id={id} className="group flex flex-col md:flex-row">
+      <div className="relative w-full md:w-[600px] h-[400px] rounded-4xl shadow-lg ">
         <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-4xl border-2 border-[var(--primary)]" />
         <img src={image} alt={title} className="relative w-full h-full rounded-4xl object-cover" />
       </div>
 
       <div className="flex flex-1 flex-col pl-20 p-5">
-        <h3
-          className="
-            text-[clamp(1rem,2.8vw+0.5rem,1.25rem)]
-            font-bold
-            mb-3
-            transition-colors duration-300
-            text-[var(--text)]
-            group-hover:text-[var(--primary)]
-          "
-        >
-          {title}
-          <span className="ml-2">↗</span>
-        </h3>
+        <h3 className="text-[clamp(1.6rem,4.8vw+0.8rem,2rem)] font-semibold text-[var(--text)]">{title}</h3>
 
-        {description && <p className="text-sm sm:text-base text-white/70 leading-relaxed">{description}</p>}
+        {description && <p className="mb-10">{description}</p>}
+
+        <div className="flex gap-5">
+          <a className="inline-flex items-center gap-2 border-2 border-[var(--primary)] px-6 py-3 rounded-md text-[var(--primary)] transition-all duration-300 hover:text-[var(--text)] hover:border-[var(--text)]">
+            Desgin <span>→</span>
+          </a>
+          {website && (
+            <a
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border-2 border-[var(--text)] px-6 py-3 rounded-md text-[var(--text)] transition-all duration-300 hover:text-[var(--primary)] hover:border-[var(--primary)]"
+            >
+              Website <span>↗</span>
+            </a>
+          )}
+          {source && (
+            <a
+              href={source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border-2 border-[var(--text)] px-6 py-3 rounded-md text-[var(--text)] transition-all duration-300 hover:text-[var(--primary)] hover:border-[var(--primary)]"
+            >
+              Source <span>↗</span>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -41,17 +62,90 @@ export default function Work() {
         <SectionHeader title="All Projects" />
 
         <div className="flex flex-col gap-20 mt-5">
-          <ProjectCard title="SAR Visualization" description="" image="/work/SAR.png" />
-          <ProjectCard title="Ask Your Crush Out Online" description="" image="/work/ask_your_crush_out_online.png" />
-          <ProjectCard title="Flavor Charter" description="" image="/work/flavor_charter.png" />
-          <ProjectCard title="Simpligami" description="" image="/work/simpligami.png" />
-          <ProjectCard title="Rhythpic" description="" image="/work/rhythpic2.png" />
-          <ProjectCard title="Kevin Rush Portfolio" description="" image="/work/kevin_rush_portfolio.jpg" />
-          <ProjectCard title="Forever" description="" image="/work/forever.png" />
-          <ProjectCard title="John Doe Portfolio" description="" image="/work/john_doe_portfolio.png" />
-          <ProjectCard title="Led Cube" description="" image="/work/led.jpg" />
-          <ProjectCard title="3D Printer" description="" image="/work/3d.jpg" />
-          <ProjectCard title="Quadcopter" description="" image="/work/quadcopter.jpg" />
+          <ProjectCard
+            id="sar-visualization"
+            title="SAR Visualization"
+            description="Developed an interactive React + D3 dashboard with five views to analyze 105 antimalarial compounds, accelerating potency comparisons by 4× using fisheye-enhanced visualizations."
+            image="/work/SAR.png"
+            website="https://sar-visualization.onrender.com"
+            source="https://github.com/pleaselukau/SAR-Visualization"
+          />
+
+          <ProjectCard
+            id="simpligami"
+            title="Simpligami"
+            description="Developed an interactive Three.js 3D origami tutorial with perspective-aware folding and ghost animations, reducing beginner mistakes by 18%."
+            image="/work/simpligami.png"
+            website="https://simpligami.onrender.com"
+            source="https://github.com/HrushikeshJoshiUIC/Simpligami"
+          />
+
+          <ProjectCard
+            id="ask-your-crush"
+            title="Ask Your Crush Out Online"
+            description="Built a user-friendly React + TypeScript web app for personalized online date proposals, featuring simplified customization and automated email notifications for responses."
+            image="/work/ask_your_crush_out_online.png"
+            website="https://iwaswondering.netlify.app"
+            source="https://github.com/HrushikeshJoshi187/Ask_Your_Crush_Out_Online"
+          />
+
+          <ProjectCard
+            id="flavor-charter"
+            title="Flavor Charter"
+            description="Developed an interactive data visualization tool to explore multivariate flavor perception patterns, outliers, and demographic differences across food preferences."
+            image="/work/flavor_charter.png"
+            website="https://flavorcharter.org/"
+            source="https://github.com/francescobotto/FlavorCharterInfo"
+          />
+
+          <ProjectCard
+            id="rhythpic"
+            title="Rhythpic"
+            description="Developed an AI-powered music visualization platform using React and Node.js, generating synchronized images from Spotify lyrics with Stable Diffusion."
+            image="/work/rhythpic2.png"
+            website="https://rhythpic-front.onrender.com"
+            source="https://github.com/skris56uic/RhythPic"
+          />
+
+          <ProjectCard
+            id="kevin-rush-portfolio"
+            title="Kevin Rush Portfolio"
+            description="Built a responsive website using Tailwind CSS, TypeScript, and Framer Motion, exploring modern UI design and smooth animations."
+            image="/work/kevin_rush_portfolio.jpg"
+            website="https://kevinrushportfoliowebsite.netlify.app"
+            source="https://github.com/HrushikeshJoshi187/Kevin_Rush_Portfolio_Website"
+          />
+
+          <ProjectCard
+            id="forever"
+            title="Forever"
+            description="Built a responsive E-Commerce website using React, TypeScript, and Tailwind CSS, featuring GSAP animations, smooth scrolling, glassmorphism, and EmailJS integration."
+            image="/work/forever.png"
+            website="https://ecommercewebsitehrushijoshi.netlify.app"
+            source="https://github.com/HrushikeshJoshi187/E_Commerce_Website"
+          />
+
+          <ProjectCard
+            id="john-doe-portfolio"
+            title="John Doe Portfolio"
+            description="Built a responsive portfolio website using React, TypeScript, and Tailwind CSS, featuring GSAP animations, smooth scrolling, glassmorphism, and EmailJS integration."
+            image="/work/john_doe_portfolio.png"
+            website="https://johndoeportfoliowebsite.netlify.app"
+            source="http://github.com/HrushikeshJoshi187/John_Doe_Portfolio_Website"
+          />
+
+          <ProjectCard id="led-cube" title="Led Cube" description="" image="/work/led.jpg" website="" source="" />
+
+          <ProjectCard id="3d-printer" title="3D Printer" description="" image="/work/3d.jpg" website="" source="" />
+
+          <ProjectCard
+            id="quadcopter"
+            title="Quadcopter"
+            description=""
+            image="/work/quadcopter.jpg"
+            website=""
+            source=""
+          />
         </div>
       </section>
     </main>

@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
+
 import SectionHeader from "../components/SectionHeader.tsx";
 
-type ProjectCardProps = { title: string; description: string; image: string; className?: string };
+type ProjectCardProps = { id: string; title: string; description: string; image: string; className?: string };
 
-const ProjectCard = ({ title, description, image, className = "" }: ProjectCardProps) => {
+const ProjectCard = ({ id, title, description, image, className = "" }: ProjectCardProps) => {
   return (
-    <div
+    <Link
+      to={`/work#${id}`}
       className={`group relative overflow-hidden rounded-4xl shadow-lg 
         bg-cover bg-center 
         bg-contain bg-no-repeat
@@ -38,12 +41,12 @@ const ProjectCard = ({ title, description, image, className = "" }: ProjectCardP
       >
         <h3 className="text-white text-2xl font-semibold mb-2">
           {title}
-          <span className="ml-2">↗</span>
+          <span className="ml-2">→</span>
         </h3>
 
         <p className="text-white/90 text-sm max-w-md">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -57,6 +60,7 @@ export default function Projects() {
 
       <div className="grid grid-cols-12 auto-rows-[180px] gap-5 w-full mt-5">
         <ProjectCard
+          id="sar-visualization"
           title="SAR Visualization"
           description=""
           image="/work/SAR.png"
@@ -64,6 +68,7 @@ export default function Projects() {
         />
 
         <ProjectCard
+          id="ask-your-crush"
           title="Ask Your Crush Out Online"
           description=""
           image="/work/ask_your_crush_out_online.png"
@@ -71,6 +76,7 @@ export default function Projects() {
         />
 
         <ProjectCard
+          id="flavor-charter"
           title="Flavor Charter"
           description=""
           image="/work/flavor_charter.png"
@@ -78,6 +84,7 @@ export default function Projects() {
         />
 
         <ProjectCard
+          id="simpligami"
           title="Simpligami"
           description=""
           image="/work/simpligami.png"
@@ -85,53 +92,28 @@ export default function Projects() {
         />
 
         <ProjectCard
+          id="rhythpic"
           title="Rhythpic"
           description=""
           image="/work/rhythpic2.png"
           className="col-span-12 md:col-span-3 row-span-2"
         />
 
-        {/* <ProjectCard
-          title="Kevin Rush Portfolio"
-          description=""
-          image="/work/kevin_rush_portfolio.jpg"
-          className="col-span-12 md:col-span-3 row-span-2"
-        /> */}
-
         <ProjectCard
+          id="forever"
           title="Forever"
           description=""
           image="/work/forever.png"
           className="col-span-12 md:col-span-6 row-span-2"
         />
 
-        {/* <ProjectCard
-          title="John Doe Portfolio"
-          description=""
-          image="/work/john_doe_portfolio.png"
-          className="col-span-12 md:col-span-3 row-span-2"
-        /> */}
-
         <ProjectCard
+          id="led-cube"
           title="Led Cube"
           description=""
           image="/work/led.jpg"
           className="col-span-12 md:col-span-6 row-span-2"
         />
-
-        {/* <ProjectCard
-          title="3D Printer"
-          description=""
-          image="/work/3d.jpg"
-          className="col-span-12 md:col-span-3 row-span-2"
-        /> */}
-
-        {/* <ProjectCard
-          title="Quadcopter"
-          description=""
-          image="/work/quadcopter.jpg"
-          className="col-span-12 md:col-span-3 row-span-2"
-        /> */}
       </div>
     </section>
   );
